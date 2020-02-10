@@ -1,0 +1,86 @@
+{
+  "id": "com.se.wiser",
+  "version": "0.0.1",
+  "compatibility": ">=3.2.0",
+  "sdk": 2,
+  "name": {
+    "en": "Schneider Electric Wiser"
+  },
+  "description": {
+    "en": "Adds support for Schnieder Electric Wiser devices."
+  },
+  "category": [
+    "lights"
+  ],
+  "permissions": [],
+  "images": {
+    "large": "/assets/images/large.png",
+    "small": "/assets/images/small.png"
+  },
+  "author": {
+    "name": "Marcus Hermansson",
+    "email": "konton@h3rman.se"
+  },
+  "drivers": [
+    {
+      "id": "WDE002334",
+      "name": {
+        "en": "Rotary Dimmer"
+      },
+      "class": "light",
+      "capabilities": [
+        "dim",
+        "onoff"
+      ],
+      "images": {
+        "large": "/drivers/WDE002334/assets/images/large.png",
+        "small": "/drivers/WDE002334/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": "Schneider Electric",
+        "productId": "NHROTARY/DIMMER/1",
+        "deviceId": 257,
+        "profileId": 260,
+        "learnmode": {
+          "image": "/drivers/WDE002334/assets/images/learnmode.svg",
+          "instruction": {
+            "en": "Toggle (push) the button 3 times quickly.\n\nIf pairing does not automatically start, try toggle the button 3 times quickly, then hold it down until the LED blinks red rapidly (it takes more than 20 seconds) and then try pairing the device again."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Dim duration"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another. Note: this setting can be overriden by the duration value in a Flow Card."
+          },
+          "value": 0,
+          "units": {
+            "en": "s",
+            "nl": "s",
+            "de": "s"
+          },
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        },
+        {
+          "id": "retain_dim_level",
+          "type": "checkbox",
+          "value": true,
+          "label": {
+            "en": "Retain dim level on OnOff"
+          },
+          "hint": {
+            "en": "Dim level will be retained on OnOff."
+          }
+        }
+      ]
+    }
+  ]
+}
