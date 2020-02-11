@@ -1,0 +1,60 @@
+{
+  "id": "CCT5010-0001",
+  "name": {
+    "en": "Micro Module Dimmer"
+  },
+  "class": "light",
+  "capabilities": [
+    "dim",
+    "onoff"
+  ],
+  "images": {
+    "large": "/drivers/CCT5010-0001/assets/images/large.png",
+    "small": "/drivers/CCT5010-0001/assets/images/small.png"
+  },
+  "zigbee": {
+    "manufacturerName": "Schneider Electric",
+    "productId": "PUCK/DIMMER/1",
+    "deviceId": 257,
+    "profileId": 260,
+    "learnmode": {
+      "image": "/drivers/CCT5010-0001/assets/images/learnmode.svg",
+      "instruction": {
+        "en": "Toggle the pair button or an attached wall switch 3 times quickly.\n\nIf pairing does not automatically start, try toggle the pair button or attached wall switch 3 times quickly, then hold it down until the LED blinks red rapidly (it takes more than 20 seconds) and then try pairing the device again."
+      }
+    }
+  },
+  "settings": [
+    {
+      "id": "transition_time",
+      "type": "number",
+      "label": {
+        "en": "Dim duration"
+      },
+      "hint": {
+        "en": "This setting determines the time in seconds it takes to dim from one level to another. Note: this setting can be overriden by the duration value in a Flow Card."
+      },
+      "value": 0,
+      "units": {
+        "en": "s",
+        "nl": "s",
+        "de": "s"
+      },
+      "attr": {
+        "min": 0,
+        "max": 6553
+      }
+    },
+    {
+      "id": "retain_dim_level",
+      "type": "checkbox",
+      "value": true,
+      "label": {
+        "en": "Retain dim level on OnOff"
+      },
+      "hint": {
+        "en": "Dim level will be retained on OnOff."
+      }
+    }
+  ]
+}
