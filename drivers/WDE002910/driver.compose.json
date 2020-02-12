@@ -1,0 +1,26 @@
+{
+  "id": "WDE002910",
+  "name": {
+    "en": "Relay switch"
+  },
+  "class": "light",
+  "capabilities": [
+    "onoff"
+  ],
+  "images": {
+    "large": "/drivers/WDE002910/assets/images/large.png",
+    "small": "/drivers/WDE002910/assets/images/small.png"
+  },
+  "zigbee": {
+    "manufacturerName": "Schneider Electric",
+    "productId": "1GANG/DIMMER/1",
+    "deviceId": 257,
+    "profileId": 260,
+    "learnmode": {
+      "image": "/drivers/WDE002910/assets/images/learnmode.svg",
+      "instruction": {
+        "en": "Toggle (push) the button 3 times quickly.\n\nIf pairing does not automatically start, try toggle the button 3 times quickly, then hold it down until the LED blinks red rapidly (it takes more than 20 seconds) and then try pairing the device again."
+      }
+    }
+  }
+}
