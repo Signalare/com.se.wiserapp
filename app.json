@@ -1,8 +1,9 @@
 {
-  "id": "com.se.wiser",
+  "id": "com.se.wiserapp",
   "version": "0.0.1",
   "compatibility": ">=3.2.0",
   "sdk": 2,
+  "brandColor": "#3DCD58",
   "name": {
     "en": "Schneider Electric Wiser"
   },
@@ -50,9 +51,9 @@
     }
   },
   "bugs": {
-    "url": "https://github.com/Signalare/com.se.wiser/issues"
+    "url": "https://github.com/Signalare/com.se.wiserapp/issues"
   },
-  "source": "https://github.com/Signalare/com.se.wiser",
+  "source": "https://github.com/Signalare/com.se.wiserapp",
   "drivers": [
     {
       "id": "ZB_1GANG_DIMMER_1",
