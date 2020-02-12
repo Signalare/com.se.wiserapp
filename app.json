@@ -9,6 +9,19 @@
   "description": {
     "en": "Adds support for Schnieder Electric Wiser devices."
   },
+  "tags": {
+    "en": [
+      "Schneider",
+      "Wiser",
+      "Light",
+      "Lights",
+      "Exxact",
+      "Zigbee",
+      "Switch",
+      "Rotary",
+      "LED"
+    ]
+  },
   "category": [
     "lights"
   ],
