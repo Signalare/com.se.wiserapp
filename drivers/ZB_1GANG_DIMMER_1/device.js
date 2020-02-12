@@ -2,10 +2,10 @@
 
 const { ZigBeeDevice } = require('homey-meshdriver');
 
-class WDE002334 extends ZigBeeDevice {
+class ZB_1GANG_DIMMER_1 extends ZigBeeDevice {
 
 	onMeshInit() {
-		
+
 		// Developer options
 		// this.printNode();
 		// this.enableDebug();
@@ -33,7 +33,7 @@ class WDE002334 extends ZigBeeDevice {
 		}
 
 		this.log('Driver has been initied');
-		
+
 	}
 
 	// onOffReport
@@ -41,19 +41,19 @@ class WDE002334 extends ZigBeeDevice {
 		const settings = this.getSettings();
 		const parsedValue = (value === 1);
 		this.log('OnOff Status, genOnOff', value, parsedValue);
-		if ( settings.retain_dim_level == true ) {
+		if (settings.retain_dim_level == true) {
 			this.node.endpoints[0].clusters['genLevelCtrl'].read("currentLevel")
-			.then(level => {
-				this.node.endpoints[0].clusters['genLevelCtrl'].write("onLevel", level)
+				.then(level => {
+					this.node.endpoints[0].clusters['genLevelCtrl'].write("onLevel", level)
+						.catch(err => {
+							this.error()
+						});
+				});
+		} else {
+			this.node.endpoints[0].clusters['genLevelCtrl'].write("onLevel", 254)
 				.catch(err => {
 					this.error()
 				});
-			});
-		} else {
-			this.node.endpoints[0].clusters['genLevelCtrl'].write("onLevel", 254)
-			.catch(err => {
-				this.error()
-			});
 		};
 		this.setCapabilityValue('onoff', parsedValue);
 	}
@@ -67,4 +67,4 @@ class WDE002334 extends ZigBeeDevice {
 
 }
 
-module.exports = WDE002334;
+module.exports = ZB_1GANG_DIMMER_1;

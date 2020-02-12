@@ -2,7 +2,7 @@
 
 const { ZigBeeDevice } = require('homey-meshdriver');
 
-class CCT5010_0001 extends ZigBeeDevice {
+class ZB_PUCK_DIMMER_1 extends ZigBeeDevice {
 
 	onMeshInit() {
 		
@@ -67,4 +67,4 @@ class CCT5010_0001 extends ZigBeeDevice {
 
 }
 
-module.exports = CCT5010_0001;
+module.exports = ZB_PUCK_DIMMER_1;
