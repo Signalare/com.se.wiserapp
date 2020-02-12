@@ -7,7 +7,7 @@
     "en": "Schneider Electric Wiser"
   },
   "description": {
-    "en": "Adds support for Schnieder Electric Wiser devices."
+    "en": "A smarter home with Wiser."
   },
   "tags": {
     "en": [
@@ -49,6 +49,11 @@
       }
     }
   },
+  "bugs": {
+    "url": "https://github.com/Signalare/com.se.wiser/issues"
+  },
+  "homeyCommunityTopicId": 1234,
+  "source": "https://github.com/Signalare/com.se.wiser",
   "drivers": [
     {
       "id": "ZB_1GANG_DIMMER_1",
