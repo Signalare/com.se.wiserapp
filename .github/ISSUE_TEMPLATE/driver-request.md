@@ -1,7 +1,7 @@
 ---
 name: Driver Request
 about: Request a driver for a Schneider Electric Wiser device that's not currently
-  supported.
+  supported. Only one device per request! If you want more devices, create multiple requests.
 title: "[Driver Request] <product name>"
 labels: enhancement
 assignees: ''
