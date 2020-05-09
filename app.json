@@ -1,6 +1,6 @@
 {
   "id": "com.se.wiserapp",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "compatibility": ">=3.2.0",
   "sdk": 2,
   "brandColor": "#3DCD58",
@@ -103,15 +103,73 @@
           }
         },
         {
-          "id": "retain_dim_level",
-          "type": "checkbox",
-          "value": true,
+          "type": "group",
           "label": {
-            "en": "Retain dim level on OnOff"
+            "en": "Switch-on Mode"
           },
-          "hint": {
-            "en": "Dim level will be retained on OnOff."
-          }
+          "children": [
+            {
+              "id": "onlevel_memory",
+              "type": "checkbox",
+              "value": false,
+              "label": {
+                "en": "Remember brigthness level"
+              }
+            },
+            {
+              "id": "onlevel_level",
+              "type": "number",
+              "label": {
+                "en": "Manual dim level"
+              },
+              "value": 100,
+              "units": {
+                "en": "%"
+              },
+              "attr": {
+                "min": 1,
+                "max": 100
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Min/Max Brightness"
+          },
+          "children": [
+            {
+              "id": "brightness_min",
+              "type": "number",
+              "value": 1,
+              "label": {
+                "en": "Minimum Brigthness"
+              },
+              "units": {
+                "en": "%"
+              },
+              "attr": {
+                "min": 1,
+                "max": 40
+              }
+            },
+            {
+              "id": "brightness_max",
+              "type": "number",
+              "label": {
+                "en": "Maximum Brigthness"
+              },
+              "value": 100,
+              "units": {
+                "en": "%"
+              },
+              "attr": {
+                "min": 60,
+                "max": 100
+              }
+            }
+          ]
         }
       ]
     },
@@ -163,15 +221,73 @@
           }
         },
         {
-          "id": "retain_dim_level",
-          "type": "checkbox",
-          "value": true,
+          "type": "group",
           "label": {
-            "en": "Retain dim level on OnOff"
+            "en": "Switch-on Mode"
           },
-          "hint": {
-            "en": "Dim level will be retained on OnOff."
-          }
+          "children": [
+            {
+              "id": "onlevel_memory",
+              "type": "checkbox",
+              "value": false,
+              "label": {
+                "en": "Remember brigthness level"
+              }
+            },
+            {
+              "id": "onlevel_level",
+              "type": "number",
+              "label": {
+                "en": "Manual dim level"
+              },
+              "value": 100,
+              "units": {
+                "en": "%"
+              },
+              "attr": {
+                "min": 1,
+                "max": 100
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Min/Max Brightness"
+          },
+          "children": [
+            {
+              "id": "brightness_min",
+              "type": "number",
+              "value": 1,
+              "label": {
+                "en": "Minimum Brigthness"
+              },
+              "units": {
+                "en": "%"
+              },
+              "attr": {
+                "min": 1,
+                "max": 40
+              }
+            },
+            {
+              "id": "brightness_max",
+              "type": "number",
+              "label": {
+                "en": "Maximum Brigthness"
+              },
+              "value": 100,
+              "units": {
+                "en": "%"
+              },
+              "attr": {
+                "min": 60,
+                "max": 100
+              }
+            }
+          ]
         }
       ]
     },
@@ -223,17 +339,101 @@
           }
         },
         {
-          "id": "retain_dim_level",
-          "type": "checkbox",
-          "value": true,
+          "type": "group",
           "label": {
-            "en": "Retain dim level on OnOff"
+            "en": "Switch-on Mode"
           },
-          "hint": {
-            "en": "Dim level will be retained on OnOff."
-          }
+          "children": [
+            {
+              "id": "onlevel_memory",
+              "type": "checkbox",
+              "value": false,
+              "label": {
+                "en": "Remember brigthness level"
+              }
+            },
+            {
+              "id": "onlevel_level",
+              "type": "number",
+              "label": {
+                "en": "Manual dim level"
+              },
+              "value": 100,
+              "units": {
+                "en": "%"
+              },
+              "attr": {
+                "min": 1,
+                "max": 100
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Min/Max Brightness"
+          },
+          "children": [
+            {
+              "id": "brightness_min",
+              "type": "number",
+              "value": 1,
+              "label": {
+                "en": "Minimum Brigthness"
+              },
+              "units": {
+                "en": "%"
+              },
+              "attr": {
+                "min": 1,
+                "max": 40
+              }
+            },
+            {
+              "id": "brightness_max",
+              "type": "number",
+              "label": {
+                "en": "Maximum Brigthness"
+              },
+              "value": 100,
+              "units": {
+                "en": "%"
+              },
+              "attr": {
+                "min": 60,
+                "max": 100
+              }
+            }
+          ]
         }
       ]
+    },
+    {
+      "id": "ZB_PUCK_SWITCH_1",
+      "name": {
+        "en": "Micro Module Switch"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff"
+      ],
+      "images": {
+        "large": "/drivers/ZB_PUCK_SWITCH_1/assets/images/large.png",
+        "small": "/drivers/ZB_PUCK_SWITCH_1/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": "Schneider Electric",
+        "productId": "PUCK/SWITCH/1",
+        "deviceId": 256,
+        "profileId": 260,
+        "learnmode": {
+          "image": "/drivers/ZB_PUCK_SWITCH_1/assets/images/learnmode.svg",
+          "instruction": {
+            "en": "Toggle the pair button or an attached wall switch 3 times quickly.\n\nIf pairing does not automatically start, try toggle the pair button or attached wall switch 3 times quickly, then hold it down until the LED blinks red rapidly (it takes more than 20 seconds) and then try pairing the device again."
+          }
+        }
+      }
     }
   ]
 }
