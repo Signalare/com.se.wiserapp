@@ -1,0 +1,26 @@
+{
+  "id": "ZB_PUCK_SWITCH_1",
+  "name": {
+    "en": "Micro Module Switch"
+  },
+  "class": "light",
+  "capabilities": [
+    "onoff"
+  ],
+  "images": {
+    "large": "/drivers/ZB_PUCK_SWITCH_1/assets/images/large.png",
+    "small": "/drivers/ZB_PUCK_SWITCH_1/assets/images/small.png"
+  },
+  "zigbee": {
+    "manufacturerName": "Schneider Electric",
+    "productId": "PUCK/SWITCH/1",
+    "deviceId": 256,
+    "profileId": 260,
+    "learnmode": {
+      "image": "/drivers/ZB_PUCK_SWITCH_1/assets/images/learnmode.svg",
+      "instruction": {
+        "en": "Toggle the pair button or an attached wall switch 3 times quickly.\n\nIf pairing does not automatically start, try toggle the pair button or attached wall switch 3 times quickly, then hold it down until the LED blinks red rapidly (it takes more than 20 seconds) and then try pairing the device again."
+      }
+    }
+  }
+}
