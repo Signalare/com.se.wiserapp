@@ -1,0 +1,53 @@
+[
+  {
+    "id": "176",
+    "type": "number",
+    "zwave": {
+      "index": 176,
+      "size": 1
+    },
+    "label": {
+      "en": "Staircase timer"
+    },
+    "value": 0,
+    "attr": {
+      "min": 0,
+      "max":  127
+    },
+    "hint": {
+      "en": ""
+    }
+  },
+  {
+    "id": "177",
+    "type": "number",
+    "zwave": {
+      "index": 177,
+      "size": 1
+    },
+    "label": {
+      "en": "Staircase timer"
+    },
+    "value": 0,
+    "min": 0,
+    "hint": {
+      "en": ""
+    }
+  },
+  {
+    "id": "183",
+    "type": "number",
+    "zwave": {
+      "index": 183,
+      "size": 1
+    },
+    "label": {
+      "en": "Additional limit duration (after brief interruption)"
+    },
+    "value": 0,
+    "min": 0,
+    "hint": {
+      "en": ""
+    }
+  }
+]

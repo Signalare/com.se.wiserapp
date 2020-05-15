@@ -1,23 +1,26 @@
 {
-  "id": "com.se.wiserapp",
-  "version": "0.0.1",
+  "id": "com.se",
+  "version": "0.1.1",
   "compatibility": ">=3.2.0",
   "sdk": 2,
   "brandColor": "#3DCD58",
   "name": {
-    "en": "Schneider Electric Wiser"
+    "en": "Schneider Electric Wiser & Connect"
   },
   "description": {
-    "en": "A smarter home with Wiser."
+    "en": "A smarter home with Schneider."
   },
   "tags": {
     "en": [
       "Schneider",
       "Wiser",
+      "Connect",
+      "Marten",
       "Light",
       "Lights",
       "Exxact",
       "Zigbee",
+      "Z-wave",
       "Switch",
       "Rotary",
       "LED"
@@ -40,15 +43,19 @@
       {
         "name": "Johan Bendz",
         "email": "johan_bendz@hotmail.com"
+      },
+      {
+        "name": "Marius Stedjan"
+      },
+      {
+        "name": "Stefan Ekstam",
+        "email": "stefan.ekstam@digitalkraft.se"
+      },
+      {
+        "name": "Ted Tolboom",
+        "email": "dTNL.Homey@gmail.com"
       }
     ]
-  },
-  "contributing": {
-    "donate": {
-      "paypal": {
-        "username": "h3rmansson"
-      }
-    }
   },
   "bugs": {
     "url": "https://github.com/Signalare/com.se.wiserapp/issues"
@@ -66,8 +73,8 @@
         "onoff"
       ],
       "images": {
-        "large": "/drivers/ZB_1GANG_DIMMER_1/assets/images/large.png",
-        "small": "/drivers/ZB_1GANG_DIMMER_1/assets/images/small.png"
+        "large": "/drivers/ZB_1GANG_DIMMER_1/assets/assets/images/large.png",
+        "small": "/drivers/ZB_1GANG_DIMMER_1/assets/assets/images/small.png"
       },
       "zigbee": {
         "manufacturerName": "Schneider Electric",
@@ -75,7 +82,6 @@
         "deviceId": 257,
         "profileId": 260,
         "learnmode": {
-          "image": "/drivers/ZB_1GANG_DIMMER_1/assets/images/learnmode.svg",
           "instruction": {
             "en": "Toggle (push) the button 3 times quickly.\n\nIf pairing does not automatically start, try toggle the button 3 times quickly, then hold it down until the LED blinks red rapidly (it takes more than 20 seconds) and then try pairing the device again."
           }
@@ -103,15 +109,73 @@
           }
         },
         {
-          "id": "retain_dim_level",
-          "type": "checkbox",
-          "value": true,
+          "type": "group",
           "label": {
-            "en": "Retain dim level on OnOff"
+            "en": "Switch-on Mode"
           },
-          "hint": {
-            "en": "Dim level will be retained on OnOff."
-          }
+          "children": [
+            {
+              "id": "onlevel_memory",
+              "type": "checkbox",
+              "value": false,
+              "label": {
+                "en": "Remember brigthness level"
+              }
+            },
+            {
+              "id": "onlevel_level",
+              "type": "number",
+              "label": {
+                "en": "Manual dim level"
+              },
+              "value": 100,
+              "units": {
+                "en": "%"
+              },
+              "attr": {
+                "min": 1,
+                "max": 100
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Min/Max Brightness"
+          },
+          "children": [
+            {
+              "id": "brightness_min",
+              "type": "number",
+              "value": 1,
+              "label": {
+                "en": "Minimum Brigthness"
+              },
+              "units": {
+                "en": "%"
+              },
+              "attr": {
+                "min": 1,
+                "max": 40
+              }
+            },
+            {
+              "id": "brightness_max",
+              "type": "number",
+              "label": {
+                "en": "Maximum Brigthness"
+              },
+              "value": 100,
+              "units": {
+                "en": "%"
+              },
+              "attr": {
+                "min": 60,
+                "max": 100
+              }
+            }
+          ]
         }
       ]
     },
@@ -126,8 +190,8 @@
         "onoff"
       ],
       "images": {
-        "large": "/drivers/ZB_NHROTARY_DIMMER_1/assets/images/large.png",
-        "small": "/drivers/ZB_NHROTARY_DIMMER_1/assets/images/small.png"
+        "large": "/drivers/ZB_NHROTARY_DIMMER_1/assets/assets/images/large.png",
+        "small": "/drivers/ZB_NHROTARY_DIMMER_1/assets/assets/images/small.png"
       },
       "zigbee": {
         "manufacturerName": "Schneider Electric",
@@ -135,7 +199,6 @@
         "deviceId": 257,
         "profileId": 260,
         "learnmode": {
-          "image": "/drivers/ZB_NHROTARY_DIMMER_1/assets/images/learnmode.svg",
           "instruction": {
             "en": "Toggle (push) the button 3 times quickly.\n\nIf pairing does not automatically start, try toggle the button 3 times quickly, then hold it down until the LED blinks red rapidly (it takes more than 20 seconds) and then try pairing the device again."
           }
@@ -163,15 +226,73 @@
           }
         },
         {
-          "id": "retain_dim_level",
-          "type": "checkbox",
-          "value": true,
+          "type": "group",
           "label": {
-            "en": "Retain dim level on OnOff"
+            "en": "Switch-on Mode"
           },
-          "hint": {
-            "en": "Dim level will be retained on OnOff."
-          }
+          "children": [
+            {
+              "id": "onlevel_memory",
+              "type": "checkbox",
+              "value": false,
+              "label": {
+                "en": "Remember brigthness level"
+              }
+            },
+            {
+              "id": "onlevel_level",
+              "type": "number",
+              "label": {
+                "en": "Manual dim level"
+              },
+              "value": 100,
+              "units": {
+                "en": "%"
+              },
+              "attr": {
+                "min": 1,
+                "max": 100
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Min/Max Brightness"
+          },
+          "children": [
+            {
+              "id": "brightness_min",
+              "type": "number",
+              "value": 1,
+              "label": {
+                "en": "Minimum Brigthness"
+              },
+              "units": {
+                "en": "%"
+              },
+              "attr": {
+                "min": 1,
+                "max": 40
+              }
+            },
+            {
+              "id": "brightness_max",
+              "type": "number",
+              "label": {
+                "en": "Maximum Brigthness"
+              },
+              "value": 100,
+              "units": {
+                "en": "%"
+              },
+              "attr": {
+                "min": 60,
+                "max": 100
+              }
+            }
+          ]
         }
       ]
     },
@@ -186,8 +307,8 @@
         "onoff"
       ],
       "images": {
-        "large": "/drivers/ZB_PUCK_DIMMER_1/assets/images/large.png",
-        "small": "/drivers/ZB_PUCK_DIMMER_1/assets/images/small.png"
+        "large": "/drivers/ZB_PUCK_DIMMER_1/assets/assets/images/large.png",
+        "small": "/drivers/ZB_PUCK_DIMMER_1/assets/assets/images/small.png"
       },
       "zigbee": {
         "manufacturerName": "Schneider Electric",
@@ -195,7 +316,6 @@
         "deviceId": 257,
         "profileId": 260,
         "learnmode": {
-          "image": "/drivers/ZB_PUCK_DIMMER_1/assets/images/learnmode.svg",
           "instruction": {
             "en": "Toggle the pair button or an attached wall switch 3 times quickly.\n\nIf pairing does not automatically start, try toggle the pair button or attached wall switch 3 times quickly, then hold it down until the LED blinks red rapidly (it takes more than 20 seconds) and then try pairing the device again."
           }
@@ -223,17 +343,1335 @@
           }
         },
         {
-          "id": "retain_dim_level",
-          "type": "checkbox",
-          "value": true,
+          "type": "group",
           "label": {
-            "en": "Retain dim level on OnOff"
+            "en": "Switch-on Mode"
+          },
+          "children": [
+            {
+              "id": "onlevel_memory",
+              "type": "checkbox",
+              "value": false,
+              "label": {
+                "en": "Remember brigthness level"
+              }
+            },
+            {
+              "id": "onlevel_level",
+              "type": "number",
+              "label": {
+                "en": "Manual dim level"
+              },
+              "value": 100,
+              "units": {
+                "en": "%"
+              },
+              "attr": {
+                "min": 1,
+                "max": 100
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Min/Max Brightness"
+          },
+          "children": [
+            {
+              "id": "brightness_min",
+              "type": "number",
+              "value": 1,
+              "label": {
+                "en": "Minimum Brigthness"
+              },
+              "units": {
+                "en": "%"
+              },
+              "attr": {
+                "min": 1,
+                "max": 40
+              }
+            },
+            {
+              "id": "brightness_max",
+              "type": "number",
+              "label": {
+                "en": "Maximum Brigthness"
+              },
+              "value": 100,
+              "units": {
+                "en": "%"
+              },
+              "attr": {
+                "min": 60,
+                "max": 100
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ZB_PUCK_SWITCH_1",
+      "name": {
+        "en": "Micro Module Switch"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff"
+      ],
+      "images": {
+        "large": "/drivers/ZB_PUCK_SWITCH_1/assets/assets/images/large.png",
+        "small": "/drivers/ZB_PUCK_SWITCH_1/assets/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": "Schneider Electric",
+        "productId": "PUCK/SWITCH/1",
+        "deviceId": 256,
+        "profileId": 260,
+        "learnmode": {
+          "instruction": {
+            "en": "Toggle the pair button or an attached wall switch 3 times quickly.\n\nIf pairing does not automatically start, try toggle the pair button or attached wall switch 3 times quickly, then hold it down until the LED blinks red rapidly (it takes more than 20 seconds) and then try pairing the device again."
+          }
+        }
+      }
+    },
+    {
+      "id": "ZW_MTN506004",
+      "name": {
+        "en": "Connect In-Wall 4ch Binary Sensor & Radio Transmitter"
+      },
+      "class": "sensor",
+      "capabilities": [],
+      "images": {
+        "large": "/drivers/ZW_MTN506004/assets/images/large.png",
+        "small": "/drivers/ZW_MTN506004/assets/images/small.png"
+      },
+      "zwave": {
+        "manufacturerId": 122,
+        "productTypeId": 3,
+        "productId": 4,
+        "associationGroups": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "associationGroupsOptions": {
+          "1": {
+            "hint": {
+              "en": "Channel one (red) - controls associated devices"
+            }
+          },
+          "2": {
+            "hint": {
+              "en": "Channel two (green) - controls associated devices"
+            }
+          },
+          "3": {
+            "hint": {
+              "en": "Channel three (brown) - controls associated devices"
+            }
+          },
+          "4": {
+            "hint": {
+              "en": "Channel four (blue) - controls associated devices"
+            }
+          }
+        },
+        "zwaveAllianceProductId": 211,
+        "zwaveAllianceProductDocumentation": "https://products.z-wavealliance.org/products/211",
+        "learnmode": {
+          "instruction": {
+            "en": "Shortcircuit the red channel on your device three times"
+          }
+        }
+      },
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Channels"
+          },
+          "children": [
+            {
+              "id": "0",
+              "type": "dropdown",
+              "zwave": {
+                "index": 0,
+                "size": 1
+              },
+              "value": "4",
+              "label": {
+                "en": "Channel one (red)"
+              },
+              "hint": {
+                "en": "Parameter #0"
+              },
+              "values": [
+                {
+                  "id": "0",
+                  "label": {
+                    "en": "Switch on/dim up"
+                  }
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "en": "Toggle switch on/off"
+                  }
+                },
+                {
+                  "id": "44",
+                  "label": {
+                    "en": "Doorbell function (on/off)"
+                  }
+                },
+                {
+                  "id": "54",
+                  "label": {
+                    "en": "Toggle shutter lower/raise"
+                  }
+                },
+                {
+                  "id": "52",
+                  "label": {
+                    "en": "Lower shutter while pressed"
+                  }
+                },
+                {
+                  "id": "55",
+                  "label": {
+                    "en": "Raise shutter while pressed"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "1",
+              "type": "dropdown",
+              "zwave": {
+                "index": 1,
+                "size": 1
+              },
+              "label": {
+                "en": "Channel two (green)"
+              },
+              "value": "0",
+              "hint": {
+                "en": "Parameter #1"
+              },
+              "values": [
+                {
+                  "id": "0",
+                  "label": {
+                    "en": "Switch off/dim down"
+                  }
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "en": "Toggle switch on/off"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "2",
+              "type": "dropdown",
+              "zwave": {
+                "index": 2,
+                "size": 1
+              },
+              "label": {
+                "en": "Channel three (brown)"
+              },
+              "value": "4",
+              "hint": {
+                "en": "Parameter #2"
+              },
+              "values": [
+                {
+                  "id": "0",
+                  "label": {
+                    "en": "Switch on/dim up"
+                  }
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "en": "Toggle switch on/off"
+                  }
+                },
+                {
+                  "id": "44",
+                  "label": {
+                    "en": "Doorbell function (on/off)"
+                  }
+                },
+                {
+                  "id": "54",
+                  "label": {
+                    "en": "Toggle shutter lower/raise"
+                  }
+                },
+                {
+                  "id": "52",
+                  "label": {
+                    "en": "Lower shutter while pressed"
+                  }
+                },
+                {
+                  "id": "55",
+                  "label": {
+                    "en": "Raise shutter while pressed"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "3",
+              "type": "dropdown",
+              "zwave": {
+                "index": 3,
+                "size": 1
+              },
+              "label": {
+                "en": "Channel four (blue)"
+              },
+              "value": "0",
+              "hint": {
+                "en": "Parameter #3"
+              },
+              "values": [
+                {
+                  "id": "0",
+                  "label": {
+                    "en": "Switch off/dim down"
+                  }
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "en": "Toggle switch on/off"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ZW_MTN507501",
+      "name": {
+        "en": "Connect In-Wall 1ch Switch"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff"
+      ],
+      "images": {
+        "large": "/drivers/ZW_MTN507501/assets/images/large.png",
+        "small": "/drivers/ZW_MTN507501/assets/images/small.png"
+      },
+      "zwave": {
+        "manufacturerId": 122,
+        "productTypeId": 32769,
+        "productId": 32770,
+        "associationGroups": [
+          1
+        ],
+        "associationGroupsOptions": {
+          "1": {
+            "hint": {
+              "en": "Controls associated devices"
+            }
+          }
+        },
+        "zwaveAllianceProductId": 319,
+        "zwaveAllianceProductDocumentation": "https://products.z-wavealliance.org/products/319",
+        "learnmode": {
+          "instruction": {
+            "en": "Press the button on your device three times"
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "176",
+          "type": "number",
+          "zwave": {
+            "index": 176,
+            "size": 1
+          },
+          "label": {
+            "en": "Staircase timer"
+          },
+          "value": 0,
+          "attr": {
+            "min": 0,
+            "max": 127
           },
           "hint": {
-            "en": "Dim level will be retained on OnOff."
+            "en": ""
+          }
+        },
+        {
+          "id": "177",
+          "type": "number",
+          "zwave": {
+            "index": 177,
+            "size": 1
+          },
+          "label": {
+            "en": "Staircase timer"
+          },
+          "value": 0,
+          "min": 0,
+          "hint": {
+            "en": ""
+          }
+        },
+        {
+          "id": "183",
+          "type": "number",
+          "zwave": {
+            "index": 183,
+            "size": 1
+          },
+          "label": {
+            "en": "Additional limit duration (after brief interruption)"
+          },
+          "value": 0,
+          "min": 0,
+          "hint": {
+            "en": ""
           }
         }
       ]
+    },
+    {
+      "id": "ZW_MTN507502",
+      "name": {
+        "en": "Connect In-Wall 2ch Switch"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff"
+      ],
+      "images": {
+        "large": "/drivers/ZW_MTN507502/assets/images/large.png",
+        "small": "/drivers/ZW_MTN507502/assets/images/small.png"
+      },
+      "zwave": {
+        "manufacturerId": 122,
+        "productTypeId": 32769,
+        "productId": 32772,
+        "associationGroups": [
+          1
+        ],
+        "associationGroupsOptions": {
+          "1": {
+            "hint": {
+              "en": "Controls associated devices"
+            }
+          }
+        },
+        "learnmode": {
+          "instruction": {
+            "en": "Press the button on your device three times"
+          }
+        },
+        "multiChannelNodes": {
+          "1": {
+            "class": "light",
+            "capabilities": [
+              "onoff"
+            ],
+            "name": {
+              "en": "Switch Ch1"
+            }
+          },
+          "2": {
+            "class": "light",
+            "capabilities": [
+              "onoff"
+            ],
+            "name": {
+              "en": "Switch Ch2"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "ZW_MTN507801",
+      "name": {
+        "en": "Connect In-Wall Roller Shutter"
+      },
+      "class": "windowcoverings",
+      "capabilities": [
+        "onoff",
+        "windowcoverings_set",
+        "windowcoverings_tilt_set"
+      ],
+      "images": {
+        "large": "/drivers/ZW_MTN507801/assets/images/large.png",
+        "small": "/drivers/ZW_MTN507801/assets/images/small.png"
+      },
+      "zwave": {
+        "manufacturerId": 122,
+        "productTypeId": 32771,
+        "productId": 1,
+        "associationGroups": [
+          1
+        ],
+        "associationGroupsOptions": {
+          "1": {
+            "hint": {
+              "en": "Controls associated devices"
+            }
+          }
+        },
+        "learnmode": {
+          "instruction": {
+            "en": "Press the button on your device three times"
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "upward_travel_time_177",
+          "zwave": {
+            "index": 177,
+            "size": 1,
+            "signed": false
+          },
+          "type": "number",
+          "label": {
+            "en": "Upward Travel Time 177"
+          },
+          "value": 0,
+          "attr": {
+            "min": 0,
+            "max": 254
+          },
+          "hint": {
+            "en": "How fast the blinds will open.\nUse 3 for factory default."
+          }
+        },
+        {
+          "id": "upward_travel_time_178",
+          "zwave": {
+            "index": 178,
+            "size": 1,
+            "signed": false
+          },
+          "type": "number",
+          "label": {
+            "en": "Upward Travel Time 178"
+          },
+          "value": 0,
+          "attr": {
+            "min": 0,
+            "max": 254
+          },
+          "hint": {
+            "en": "How fast the blinds will open.\nUse 3 for factory default."
+          }
+        },
+        {
+          "id": "downward_travel_time_179",
+          "zwave": {
+            "index": 179,
+            "size": 1,
+            "signed": false
+          },
+          "type": "number",
+          "label": {
+            "en": "Downward Travel Time 179"
+          },
+          "value": 0,
+          "attr": {
+            "min": 0,
+            "max": 254
+          },
+          "hint": {
+            "en": "How fast the blinds will close.\nUse 3 for factory default."
+          }
+        },
+        {
+          "id": "downward_travel_time_180",
+          "zwave": {
+            "index": 180,
+            "size": 1,
+            "signed": false
+          },
+          "type": "number",
+          "label": {
+            "en": "Downward Travel Time 180"
+          },
+          "value": 0,
+          "attr": {
+            "min": 0,
+            "max": 254
+          },
+          "hint": {
+            "en": "How fast the blinds will close.\nUse 3 for factory default."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ZW_MTN507900",
+      "name": {
+        "en": "Connect In-Wall Dimmer"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim"
+      ],
+      "capabilitiesOptions": {
+        "onoff": {
+          "setOnDim": true
+        }
+      },
+      "images": {
+        "large": "/drivers/ZW_MTN507900/assets/images/large.png",
+        "small": "/drivers/ZW_MTN507900/assets/images/small.png"
+      },
+      "zwave": {
+        "manufacturerId": 122,
+        "productTypeId": 16387,
+        "productId": 2,
+        "associationGroups": [
+          1
+        ],
+        "associationGroupsOptions": {
+          "1": {
+            "hint": {
+              "en": "Controls associated devices"
+            }
+          }
+        },
+        "zwaveAllianceProductId": 402,
+        "zwaveAllianceProductDocumentation": "https://products.z-wavealliance.org/products/402",
+        "learnmode": {
+          "instruction": {
+            "en": "Press the button on your device three times"
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "dimming_duration",
+          "zwave": {
+            "index": 196,
+            "size": 1,
+            "signed": false
+          },
+          "type": "number",
+          "label": {
+            "en": "Dimming Speed"
+          },
+          "value": 3,
+          "attr": {
+            "min": 1,
+            "max": 255
+          },
+          "hint": {
+            "en": "How fast the dimmer will dim the lights.\nUse 3 for factory default."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ZW_MTN508244",
+      "name": {
+        "en": "Connect Move, push-button"
+      },
+      "class": "button",
+      "capabilities": [
+        "button"
+      ],
+      "images": {
+        "large": "/drivers/ZW_MTN508244/assets/images/large.png",
+        "small": "/drivers/ZW_MTN508244/assets/images/small.png"
+      },
+      "zwave": {
+        "manufacturerId": 122,
+        "productTypeId": 2,
+        "productId": 1,
+        "associationGroups": [
+          1
+        ],
+        "associationGroupsOptions": {
+          "1": {
+            "hint": {
+              "en": "Button - For dimming to work, this group can only contain one device id"
+            }
+          }
+        },
+        "wakeUpInterval": 30,
+        "zwaveAllianceProductId": 268,
+        "zwaveAllianceProductDocumentation": "https://products.z-wavealliance.org/products/268",
+        "learnmode": {
+          "instruction": {
+            "en": "Press the button on your device three times and wait until the light stops blinking"
+          }
+        }
+      },
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Buttons"
+          },
+          "children": [
+            {
+              "id": "0",
+              "type": "dropdown",
+              "zwave": {
+                "index": 0,
+                "size": 1
+              },
+              "value": "4",
+              "label": {
+                "en": "Button"
+              },
+              "hint": {
+                "en": "Parameter #0"
+              },
+              "values": [
+                {
+                  "id": "4",
+                  "label": {
+                    "en": "Toggle/dim"
+                  }
+                },
+                {
+                  "id": "60",
+                  "label": {
+                    "en": "Retrieve/save scene"
+                  }
+                },
+                {
+                  "id": "44",
+                  "label": {
+                    "en": "Doorbell function (on/off)"
+                  }
+                },
+                {
+                  "id": "54",
+                  "label": {
+                    "en": "Toggle shutter lower/raise"
+                  }
+                },
+                {
+                  "id": "52",
+                  "label": {
+                    "en": "Lower shutter while pressed"
+                  }
+                },
+                {
+                  "id": "55",
+                  "label": {
+                    "en": "Raise shutter while pressed"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ZW_MTN577099",
+      "name": {
+        "en": "Connect Universal Super Dimmer"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim"
+      ],
+      "images": {
+        "large": "/drivers/ZW_MTN577099/assets/images/large.png",
+        "small": "/drivers/ZW_MTN577099/assets/images/small.png"
+      },
+      "zwave": {
+        "manufacturerId": 122,
+        "productTypeId": 32769,
+        "productId": 32770,
+        "associationGroups": [
+          1
+        ],
+        "associationGroupsOptions": {
+          "1": {
+            "hint": {
+              "en": "Controls associated devices"
+            }
+          }
+        },
+        "learnmode": {
+          "instruction": {
+            "en": "Press the button on your device three times"
+          }
+        }
+      },
+      "settings": []
+    },
+    {
+      "id": "ZW_WDE00x903",
+      "name": {
+        "en": "Connect Double Push-Buttons"
+      },
+      "class": "button",
+      "capabilities": [],
+      "images": {
+        "large": "/drivers/ZW_WDE00x903/assets/images/large.png",
+        "small": "/drivers/ZW_WDE00x903/assets/images/small.png"
+      },
+      "zwave": {
+        "manufacturerId": 122,
+        "productTypeId": 1,
+        "productId": 4,
+        "associationGroups": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "associationGroupsOptions": {
+          "1": {
+            "hint": {
+              "en": "Upper left - controls associated devices"
+            }
+          },
+          "2": {
+            "hint": {
+              "en": "Lower left - controls associated devices"
+            }
+          },
+          "3": {
+            "hint": {
+              "en": "Upper right - controls associated devices"
+            }
+          },
+          "4": {
+            "hint": {
+              "en": "Lower right - controls associated devices"
+            }
+          }
+        },
+        "learnmode": {
+          "instruction": {
+            "en": "Press the button on your device three times"
+          }
+        }
+      },
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Button Top Left"
+          },
+          "children": [
+            {
+              "id": "button_mode_tl",
+              "zwave": {
+                "index": 0,
+                "size": 1,
+                "signed": false
+              },
+              "type": "dropdown",
+              "label": {
+                "en": "Mode"
+              },
+              "value": "0",
+              "values": [
+                {
+                  "id": "0",
+                  "label": {
+                    "en": "0 - Switching/dimming/roller shutter dual-surface"
+                  }
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "en": "4 - On/off, single-surface"
+                  }
+                },
+                {
+                  "id": "60",
+                  "label": {
+                    "en": "60 - Retrieve/Save Scene"
+                  }
+                },
+                {
+                  "id": "44",
+                  "label": {
+                    "en": "44 - Doorbell Function"
+                  }
+                },
+                {
+                  "id": "54",
+                  "label": {
+                    "en": "54 - Move Roller Shutter, single-surface"
+                  }
+                },
+                {
+                  "id": "52",
+                  "label": {
+                    "en": "52 - Lower Roller Shutter as long as pressed"
+                  }
+                },
+                {
+                  "id": "55",
+                  "label": {
+                    "en": "55 - Raise Roller Shutter as long as pressed"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Button Bottom Left"
+          },
+          "children": [
+            {
+              "id": "button_mode_bl",
+              "zwave": {
+                "index": 1,
+                "size": 1,
+                "signed": false
+              },
+              "type": "dropdown",
+              "label": {
+                "en": "Mode"
+              },
+              "value": "0",
+              "values": [
+                {
+                  "id": "0",
+                  "label": {
+                    "en": "0 - Switching/dimming/roller shutter dual-surface"
+                  }
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "en": "4 - On/off, single-surface"
+                  }
+                },
+                {
+                  "id": "60",
+                  "label": {
+                    "en": "60 - Retrieve/Save Scene"
+                  }
+                },
+                {
+                  "id": "44",
+                  "label": {
+                    "en": "44 - Doorbell Function"
+                  }
+                },
+                {
+                  "id": "54",
+                  "label": {
+                    "en": "54 - Move Roller Shutter, single-surface"
+                  }
+                },
+                {
+                  "id": "52",
+                  "label": {
+                    "en": "52 - Lower Roller Shutter as long as pressed"
+                  }
+                },
+                {
+                  "id": "55",
+                  "label": {
+                    "en": "55 - Raise Roller Shutter as long as pressed"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Button Top Right"
+          },
+          "children": [
+            {
+              "id": "button_mode_tr",
+              "zwave": {
+                "index": 2,
+                "size": 1,
+                "signed": false
+              },
+              "type": "dropdown",
+              "label": {
+                "en": "Mode"
+              },
+              "value": "0",
+              "values": [
+                {
+                  "id": "0",
+                  "label": {
+                    "en": "0 - Switching/dimming/roller shutter dual-surface"
+                  }
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "en": "4 - On/off, single-surface"
+                  }
+                },
+                {
+                  "id": "60",
+                  "label": {
+                    "en": "60 - Retrieve/Save Scene"
+                  }
+                },
+                {
+                  "id": "44",
+                  "label": {
+                    "en": "44 - Doorbell Function"
+                  }
+                },
+                {
+                  "id": "54",
+                  "label": {
+                    "en": "54 - Move Roller Shutter, single-surface"
+                  }
+                },
+                {
+                  "id": "52",
+                  "label": {
+                    "en": "52 - Lower Roller Shutter as long as pressed"
+                  }
+                },
+                {
+                  "id": "55",
+                  "label": {
+                    "en": "55 - Raise Roller Shutter as long as pressed"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Button Bottom Right"
+          },
+          "children": [
+            {
+              "id": "button_mode_br",
+              "zwave": {
+                "index": 3,
+                "size": 1,
+                "signed": false
+              },
+              "type": "dropdown",
+              "label": {
+                "en": "Mode"
+              },
+              "value": "0",
+              "values": [
+                {
+                  "id": "0",
+                  "label": {
+                    "en": "0 - Switching/dimming/roller shutter dual-surface"
+                  }
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "en": "4 - On/off, single-surface"
+                  }
+                },
+                {
+                  "id": "60",
+                  "label": {
+                    "en": "60 - Retrieve/Save Scene"
+                  }
+                },
+                {
+                  "id": "44",
+                  "label": {
+                    "en": "44 - Doorbell Function"
+                  }
+                },
+                {
+                  "id": "54",
+                  "label": {
+                    "en": "54 - Move Roller Shutter, single-surface"
+                  }
+                },
+                {
+                  "id": "52",
+                  "label": {
+                    "en": "52 - Lower Roller Shutter as long as pressed"
+                  }
+                },
+                {
+                  "id": "55",
+                  "label": {
+                    "en": "55 - Raise Roller Shutter as long as pressed"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
-  ]
+  ],
+  "flow": {
+    "actions": [
+      {
+        "id": "schneider_dim_startLevelChange",
+        "title": {
+          "en": "Start dim level change",
+          "nl": "Start helderheid transitie"
+        },
+        "hint": {
+          "en": "This action card will start a dim level change in the set direction. \nDim duration is set in device settings.",
+          "nl": "Deze actiekaart start een dimniveauverandering in de ingestelde richting. \nDimduur is ingesteld in apparaatinstellingen."
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ZW_MTN507801"
+          },
+          {
+            "name": "direction",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "0",
+                "label": {
+                  "en": "Increase dim level",
+                  "nl": "Toenemende helderheid"
+                }
+              },
+              {
+                "id": "1",
+                "label": {
+                  "en": "Decrease dim level",
+                  "nl": "Afnemende helderheid"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "schneider_dim_stopLevelChange",
+        "title": {
+          "en": "Stop dim level change",
+          "nl": "Stop helderheid transitie"
+        },
+        "hint": {
+          "en": "This action card will stop a dim level change.",
+          "nl": "Deze actie kaart start een helderheids transitie in de ingestelde richting."
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ZW_MTN507801"
+          }
+        ]
+      },
+      {
+        "id": "schneider_dim_startToggleLevelChange",
+        "title": {
+          "en": "Start dim level change (toggle direction)",
+          "nl": "Start helderheid transitie (wisselrichting)"
+        },
+        "hint": {
+          "en": "This action card will start a dim level change, and toggle dim direction (up/down) for every time it is invoked. \nDim duration is set in device settings.",
+          "nl": "Deze actiekaart activeert het begin van een dimniveauverandering en wisselt van richting (omhoog/omlaag). \nDe dimduur wordt ingesteld in apparaatinstellingen."
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ZW_MTN507801"
+          },
+          {
+            "name": "roll_over",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "0",
+                "label": {
+                  "en": "Stop level change at min/max brightness"
+                }
+              },
+              {
+                "id": "1",
+                "label": {
+                  "en": "Cycle brightness between min/max"
+                }
+              }
+            ],
+            "label": {
+              "en": "Dimming behavior"
+            },
+            "hint": {
+              "en": "Enable this to toggle dim direction when min/max brightness is reached."
+            }
+          }
+        ]
+      },
+      {
+        "id": "schneider_dim_stopToggleLevelChange",
+        "title": {
+          "en": "Stop dim level change (toggle direction)",
+          "nl": "Stop helderheid transitie (wisselrichting)"
+        },
+        "hint": {
+          "en": "This action card will trigger the stop of a toggled dim level change.",
+          "nl": "Deze actiekaart activeert de stop van een omgeschakeld dimniveau wijzigen"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ZW_MTN507801"
+          }
+        ]
+      },
+      {
+        "id": "schneider_dim_startLevelChange",
+        "title": {
+          "en": "Start dim level change",
+          "nl": "Start helderheid transitie"
+        },
+        "hint": {
+          "en": "This action card will start a dim level change in the set direction. \nDim duration is set in device settings.",
+          "nl": "Deze actiekaart start een dimniveauverandering in de ingestelde richting. \nDimduur is ingesteld in apparaatinstellingen."
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ZW_MTN507900"
+          },
+          {
+            "name": "direction",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "0",
+                "label": {
+                  "en": "Increase dim level",
+                  "nl": "Toenemende helderheid"
+                }
+              },
+              {
+                "id": "1",
+                "label": {
+                  "en": "Decrease dim level",
+                  "nl": "Afnemende helderheid"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "schneider_dim_stopLevelChange",
+        "title": {
+          "en": "Stop dim level change",
+          "nl": "Stop helderheid transitie"
+        },
+        "hint": {
+          "en": "This action card will stop a dim level change.",
+          "nl": "Deze actie kaart start een helderheids transitie in de ingestelde richting."
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ZW_MTN507900"
+          }
+        ]
+      },
+      {
+        "id": "schneider_dim_startToggleLevelChange",
+        "title": {
+          "en": "Start dim level change (toggle direction)",
+          "nl": "Start helderheid transitie (wisselrichting)"
+        },
+        "hint": {
+          "en": "This action card will start a dim level change, and toggle dim direction (up/down) for every time it is invoked. \nDim duration is set in device settings.",
+          "nl": "Deze actiekaart activeert het begin van een dimniveauverandering en wisselt van richting (omhoog/omlaag). \nDe dimduur wordt ingesteld in apparaatinstellingen."
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ZW_MTN507900"
+          },
+          {
+            "name": "roll_over",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "0",
+                "label": {
+                  "en": "Stop level change at min/max brightness"
+                }
+              },
+              {
+                "id": "1",
+                "label": {
+                  "en": "Cycle brightness between min/max"
+                }
+              }
+            ],
+            "label": {
+              "en": "Dimming behavior"
+            },
+            "hint": {
+              "en": "Enable this to toggle dim direction when min/max brightness is reached."
+            }
+          }
+        ]
+      },
+      {
+        "id": "schneider_dim_stopToggleLevelChange",
+        "title": {
+          "en": "Stop dim level change (toggle direction)",
+          "nl": "Stop helderheid transitie (wisselrichting)"
+        },
+        "hint": {
+          "en": "This action card will trigger the stop of a toggled dim level change.",
+          "nl": "Deze actiekaart activeert de stop van een omgeschakeld dimniveau wijzigen"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ZW_MTN507900"
+          }
+        ]
+      }
+    ]
+  }
 }

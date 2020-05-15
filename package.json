@@ -1,6 +1,6 @@
 {
-  "name": "com.se.wiserapp",
-  "version": "0.0.1",
+  "name": "com.se",
+  "version": "0.1.1",
   "main": "app.js",
   "devDependencies": {
     "homey": "^2.1.5"

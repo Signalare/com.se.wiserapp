@@ -1,0 +1,47 @@
+{
+  "id": "MTN506004",
+  "name": {
+    "en": "Connect In-Wall 4ch Binary Sensor & Radio Transmitter"
+  },
+  "class": "sensor",
+  "capabilities": [],
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "zwave": {
+    "manufacturerId": 122,
+    "productTypeId": 3,
+    "productId": 4,
+    "associationGroups": [1,2,3,4],
+    "associationGroupsOptions": {
+      "1": {
+        "hint": {
+          "en": "Channel one (red) - controls associated devices"
+        }
+      },
+      "2": {
+        "hint": {
+          "en": "Channel two (green) - controls associated devices"
+        }
+      },
+      "3": {
+        "hint": {
+          "en": "Channel three (brown) - controls associated devices"
+        }
+      },
+      "4": {
+        "hint": {
+          "en": "Channel four (blue) - controls associated devices"
+        }
+      }
+    },
+    "zwaveAllianceProductId": 211,
+    "zwaveAllianceProductDocumentation": "https://products.z-wavealliance.org/products/211",
+    "learnmode": {
+      "instruction": {
+        "en": "Shortcircuit the red channel on your device three times"
+      }
+    }
+  }
+}

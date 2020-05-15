@@ -1,0 +1,33 @@
+{
+  "id": "MTN507900",
+  "name": {
+    "en": "Connect In-Wall Dimmer"
+  },
+  "class": "light",
+  "capabilities": [
+    "onoff",
+    "dim"
+  ],
+  "capabilitiesOptions": {
+    "onoff": {
+			"setOnDim": true
+		}
+  },
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "zwave": {
+    "manufacturerId": 122,
+    "productTypeId": 16387,
+    "productId": 2,
+    "associationGroups": [1],
+    "zwaveAllianceProductId": 402,
+    "zwaveAllianceProductDocumentation": "https://products.z-wavealliance.org/products/402",
+    "learnmode": {
+      "instruction": {
+        "en": "Press the button on your device three times"
+      }
+    }
+  }
+}

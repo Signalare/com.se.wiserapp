@@ -1,0 +1,63 @@
+[
+  {
+    "type": "group",
+    "label": {
+      "en": "Buttons"
+    },
+    "children": [
+      {
+        "id": "0",
+        "type": "dropdown",
+        "zwave": {
+          "index": 0,
+          "size": 1
+        },
+        "value": "4",
+        "label": {
+          "en": "Button"
+        },
+        "hint": {
+          "en": "Parameter #0"
+        },
+        "values": [
+          {
+            "id": "4",
+            "label": {
+              "en": "Toggle/dim"
+            }
+          },
+          {
+            "id": "60",
+            "label": {
+              "en": "Retrieve/save scene"
+            }
+          },
+          {
+            "id": "44",
+            "label": {
+              "en": "Doorbell function (on/off)"
+            }
+          },
+          {
+            "id": "54",
+            "label": {
+              "en": "Toggle shutter lower/raise"
+            }
+          },
+          {
+            "id": "52",
+            "label": {
+              "en": "Lower shutter while pressed"
+            }
+          },
+          {
+            "id": "55",
+            "label": {
+              "en": "Raise shutter while pressed"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

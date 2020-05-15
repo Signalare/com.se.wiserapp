@@ -1,0 +1,35 @@
+{
+  "id": "MTN508244",
+  "name": {
+    "en": "Connect Move, push-button"
+  },
+  "class": "button",
+  "capabilities": [
+    "button"
+  ],
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "zwave": {
+    "manufacturerId": 122,
+    "productTypeId": 2,
+    "productId": 1,
+    "associationGroups": [1],
+    "associationGroupsOptions": {
+      "1": {
+        "hint": {
+          "en": "Button - For dimming to work, this group can only contain one device id"
+        }
+      }
+    },
+    "wakeUpInterval": 900,
+    "zwaveAllianceProductId": 268,
+    "zwaveAllianceProductDocumentation": "https://products.z-wavealliance.org/products/268",
+    "learnmode": {
+      "instruction": {
+        "en": "Press the button on your device three times and wait until the light stops blinking"
+      }
+    }
+  }
+}

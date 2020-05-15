@@ -1,0 +1,26 @@
+{
+  "id": "MTN577099",
+  "name": {
+    "en": "Connect Universal Super Dimmer"
+  },
+  "class": "light",
+  "capabilities": [
+    "onoff",
+    "dim"
+  ],
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "zwave": {
+    "manufacturerId": 122,
+    "productTypeId": 32769,
+    "productId": 32770,
+    "associationGroups": [1],
+    "learnmode": {
+      "instruction": {
+        "en": "Press the button on your device three times"
+      }
+    }
+  }
+}

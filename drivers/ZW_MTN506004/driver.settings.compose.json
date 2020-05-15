@@ -1,0 +1,174 @@
+[
+  {
+    "type": "group",
+    "label": {
+      "en": "Channels"
+    },
+    "children": [
+      {
+        "id": "0",
+        "type": "dropdown",
+        "zwave": {
+          "index": 0,
+          "size": 1
+        },
+        "value": "4",
+        "label": {
+          "en": "Channel one (red)"
+        },
+        "hint": {
+          "en": "Parameter #0"
+        },
+        "values": [
+          {
+            "id": "0",
+            "label": {
+              "en": "Switch on/dim up"
+            }
+          },
+          {
+            "id": "4",
+            "label": {
+              "en": "Toggle switch on/off"
+            }
+          },
+          {
+            "id": "44",
+            "label": {
+              "en": "Doorbell function (on/off)"
+            }
+          },
+          {
+            "id": "54",
+            "label": {
+              "en": "Toggle shutter lower/raise"
+            }
+          },
+          {
+            "id": "52",
+            "label": {
+              "en": "Lower shutter while pressed"
+            }
+          },
+          {
+            "id": "55",
+            "label": {
+              "en": "Raise shutter while pressed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "1",
+        "type": "dropdown",
+        "zwave": {
+          "index": 1,
+          "size": 1
+        },
+        "label": {
+          "en": "Channel two (green)"
+        },
+        "value": "0",
+        "hint": {
+          "en": "Parameter #1"
+        },
+        "values": [
+          {
+            "id": "0",
+            "label": {
+              "en": "Switch off/dim down"
+            }
+          },
+          {
+            "id": "4",
+            "label": {
+              "en": "Toggle switch on/off"
+            }
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "type": "dropdown",
+        "zwave": {
+          "index": 2,
+          "size": 1
+        },
+        "label": {
+          "en": "Channel three (brown)"
+        },
+        "value": "4",
+        "hint": {
+          "en": "Parameter #2"
+        },
+        "values": [
+          {
+            "id": "0",
+            "label": {
+              "en": "Switch on/dim up"
+            }
+          },
+          {
+            "id": "4",
+            "label": {
+              "en": "Toggle switch on/off"
+            }
+          },
+          {
+            "id": "44",
+            "label": {
+              "en": "Doorbell function (on/off)"
+            }
+          },
+          {
+            "id": "54",
+            "label": {
+              "en": "Toggle shutter lower/raise"
+            }
+          },
+          {
+            "id": "52",
+            "label": {
+              "en": "Lower shutter while pressed"
+            }
+          },
+          {
+            "id": "55",
+            "label": {
+              "en": "Raise shutter while pressed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "type": "dropdown",
+        "zwave": {
+          "index": 3,
+          "size": 1
+        },
+        "label": {
+          "en": "Channel four (blue)"
+        },
+        "value": "0",
+        "hint": {
+          "en": "Parameter #3"
+        },
+        "values": [
+          {
+            "id": "0",
+            "label": {
+              "en": "Switch off/dim down"
+            }
+          },
+          {
+            "id": "4",
+            "label": {
+              "en": "Toggle switch on/off"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

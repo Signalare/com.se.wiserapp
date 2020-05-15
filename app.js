@@ -2,12 +2,12 @@
 
 const Homey = require('homey');
 
-class WiserApp extends Homey.App {
+class SchneiderApp extends Homey.App {
 	
 	onInit() {
-		this.log('Schneider Electric Wiser app is running...');
+		this.log('Schneider Electric App is running...');
 	}
 	
 }
 
-module.exports = WiserApp;
+module.exports = SchneiderApp;

@@ -4,5 +4,8 @@
   },
   {
     "id": "zigbee"
+  },
+  {
+    "id": "zwave"
   }
 ]

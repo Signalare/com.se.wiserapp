@@ -1,0 +1,27 @@
+{
+  "id": "MTN507801",
+  "name": {
+    "en": "Connect In-Wall Roller Shutter"
+  },
+  "class": "windowcoverings",
+  "capabilities": [
+    "onoff",
+    "windowcoverings_set",
+    "windowcoverings_tilt_set"
+  ],
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "zwave": {
+    "manufacturerId": 122,
+    "productTypeId": 32771,
+    "productId": 1,
+    "associationGroups": [1],
+    "learnmode": {
+      "instruction": {
+        "en": "Press the button on your device three times"
+      }
+    }
+  }
+}

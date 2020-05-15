@@ -1,0 +1,45 @@
+{
+  "id": "WDE00x903",
+  "name": {
+    "en": "Connect Double Push-Buttons"
+  },
+  "class": "button",
+  "capabilities": [],
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "zwave": {
+    "manufacturerId": 122,
+    "productTypeId": 1,
+    "productId": 4,
+    "associationGroups": [1,2,3,4],
+    "associationGroupsOptions": {
+      "1": {
+        "hint": {
+          "en": "Upper left - controls associated devices"
+        }
+      },
+      "2": {
+        "hint": {
+          "en": "Lower left - controls associated devices"
+        }
+      },
+      "3": {
+        "hint": {
+          "en": "Upper right - controls associated devices"
+        }
+      },
+      "4": {
+        "hint": {
+          "en": "Lower right - controls associated devices"
+        }
+      }
+    },
+    "learnmode": {
+      "instruction": {
+        "en": "Press the button on your device three times"
+      }
+    }
+  }
+}

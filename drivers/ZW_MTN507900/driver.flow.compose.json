@@ -1,0 +1,98 @@
+{
+  "triggers": [],
+  "conditions": [],
+  "actions": [
+    {
+      "id": "schneider_dim_startLevelChange",
+      "title": {
+        "en": "Start dim level change",
+        "nl": "Start helderheid transitie"
+      },
+      "hint": {
+        "en": "This action card will start a dim level change in the set direction. \nDim duration is set in device settings.",
+        "nl": "Deze actiekaart start een dimniveauverandering in de ingestelde richting. \nDimduur is ingesteld in apparaatinstellingen."
+      },
+      "args": [
+        {
+          "name": "direction",
+          "type": "dropdown",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Increase dim level",
+                "nl": "Toenemende helderheid"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Decrease dim level",
+                "nl": "Afnemende helderheid"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "schneider_dim_stopLevelChange",
+      "title": {
+        "en": "Stop dim level change",
+        "nl": "Stop helderheid transitie"
+      },
+      "hint": {
+        "en": "This action card will stop a dim level change.",
+        "nl": "Deze actie kaart start een helderheids transitie in de ingestelde richting."
+      }
+    },
+    {
+      "id": "schneider_dim_startToggleLevelChange",
+      "title": {
+        "en": "Start dim level change (toggle direction)",
+        "nl": "Start helderheid transitie (wisselrichting)"
+      },
+      "hint": {
+        "en": "This action card will start a dim level change, and toggle dim direction (up/down) for every time it is invoked. \nDim duration is set in device settings.",
+        "nl": "Deze actiekaart activeert het begin van een dimniveauverandering en wisselt van richting (omhoog/omlaag). \nDe dimduur wordt ingesteld in apparaatinstellingen."
+      },
+      "args": [
+        {
+          "name": "roll_over",
+          "type": "dropdown",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Stop level change at min/max brightness"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                  "en": "Cycle brightness between min/max"
+                }
+            }
+          ],
+          "label": {
+            "en": "Dimming behavior"
+          },
+          "hint": {
+            "en": "Enable this to toggle dim direction when min/max brightness is reached."
+          }
+        }
+      ]
+    },
+    {
+      "id": "schneider_dim_stopToggleLevelChange",
+      "title": {
+        "en": "Stop dim level change (toggle direction)",
+        "nl": "Stop helderheid transitie (wisselrichting)"
+      },
+      "hint": {
+        "en": "This action card will trigger the stop of a toggled dim level change.",
+        "nl": "Deze actiekaart activeert de stop van een omgeschakeld dimniveau wijzigen"
+      }
+    }
+  ]
+}

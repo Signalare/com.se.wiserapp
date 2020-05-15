@@ -1,0 +1,27 @@
+{
+  "id": "MTN507501",
+  "name": {
+    "en": "Connect In-Wall 1ch Switch"
+  },
+  "class": "light",
+  "capabilities": [
+    "onoff"
+  ],
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "zwave": {
+    "manufacturerId": 122,
+    "productTypeId": 32769,
+    "productId": 32770,
+    "associationGroups": [1],
+    "zwaveAllianceProductId": 319,
+    "zwaveAllianceProductDocumentation": "https://products.z-wavealliance.org/products/319",
+    "learnmode": {
+      "instruction": {
+        "en": "Press the button on your device three times"
+      }
+    }
+  }
+}

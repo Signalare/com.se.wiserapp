@@ -9,8 +9,8 @@
     "onoff"
   ],
   "images": {
-    "large": "/drivers/ZB_NHROTARY_DIMMER_1/assets/images/large.png",
-    "small": "/drivers/ZB_NHROTARY_DIMMER_1/assets/images/small.png"
+    "large": "{{driverAssetsPath}}/assets/images/large.png",
+    "small": "{{driverAssetsPath}}/assets/images/small.png"
   },
   "zigbee": {
     "manufacturerName": "Schneider Electric",
@@ -18,7 +18,6 @@
     "deviceId": 257,
     "profileId": 260,
     "learnmode": {
-      "image": "/drivers/ZB_NHROTARY_DIMMER_1/assets/images/learnmode.svg",
       "instruction": {
         "en": "Toggle (push) the button 3 times quickly.\n\nIf pairing does not automatically start, try toggle the button 3 times quickly, then hold it down until the LED blinks red rapidly (it takes more than 20 seconds) and then try pairing the device again."
       }

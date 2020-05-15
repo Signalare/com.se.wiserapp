@@ -1,0 +1,41 @@
+{
+  "id": "MTN507502",
+  "name": {
+    "en": "Connect In-Wall 2ch Switch"
+  },
+  "class": "light",
+  "capabilities": [
+    "onoff"
+  ],
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "zwave": {
+    "manufacturerId": 122,
+    "productTypeId": 32769,
+    "productId": 32772,
+    "associationGroups": [1],
+    "learnmode": {
+      "instruction": {
+        "en": "Press the button on your device three times"
+      }
+    },
+    "multiChannelNodes": {
+      "1": {
+        "class": "light",
+        "capabilities": ["onoff"],
+        "name": {
+          "en": "Switch Ch1"
+        }
+      },
+      "2": {
+        "class": "light",
+        "capabilities": ["onoff"],
+        "name": {
+          "en": "Switch Ch2"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "id": "dimming_duration",
+    "zwave": {
+      "index": 196,
+      "size": 1,
+      "signed": false
+    },
+    "type": "number",
+    "label": {
+      "en": "Dimming Speed"
+    },
+    "value": 3,
+    "attr": {
+      "min": 1,
+      "max": 255
+    },
+    "hint": {
+      "en": "How fast the dimmer will dim the lights.\nUse 3 for factory default."
+    }
+  }
+]

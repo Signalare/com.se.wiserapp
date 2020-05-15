@@ -1,0 +1,82 @@
+[
+  {
+    "id": "upward_travel_time_177",
+    "zwave": {
+      "index": 177,
+      "size": 1,
+      "signed": false
+    },
+    "type": "number",
+    "label": {
+      "en": "Upward Travel Time 177"
+    },
+    "value": 0,
+    "attr": {
+      "min": 0,
+      "max": 254
+    },
+    "hint": {
+      "en": "How fast the blinds will open.\nUse 3 for factory default."
+    }
+  },
+  {
+    "id": "upward_travel_time_178",
+    "zwave": {
+      "index": 178,
+      "size": 1,
+      "signed": false
+    },
+    "type": "number",
+    "label": {
+      "en": "Upward Travel Time 178"
+    },
+    "value": 0,
+    "attr": {
+      "min": 0,
+      "max": 254
+    },
+    "hint": {
+      "en": "How fast the blinds will open.\nUse 3 for factory default."
+    }
+  },
+  {
+    "id": "downward_travel_time_179",
+    "zwave": {
+      "index": 179,
+      "size": 1,
+      "signed": false
+    },
+    "type": "number",
+    "label": {
+      "en": "Downward Travel Time 179"
+    },
+    "value": 0,
+    "attr": {
+      "min": 0,
+      "max": 254
+    },
+    "hint": {
+      "en": "How fast the blinds will close.\nUse 3 for factory default."
+    }
+  },
+  {
+    "id": "downward_travel_time_180",
+    "zwave": {
+      "index": 180,
+      "size": 1,
+      "signed": false
+    },
+    "type": "number",
+    "label": {
+      "en": "Downward Travel Time 180"
+    },
+    "value": 0,
+    "attr": {
+      "min": 0,
+      "max": 254
+    },
+    "hint": {
+      "en": "How fast the blinds will close.\nUse 3 for factory default."
+    }
+  }
+]
