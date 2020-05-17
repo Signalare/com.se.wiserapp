@@ -61,6 +61,433 @@
     "url": "https://github.com/Signalare/com.se.wiserapp/issues"
   },
   "source": "https://github.com/Signalare/com.se.wiserapp",
+  "flow": {
+    "triggers": [
+      {
+        "id": "trigger_button1_button",
+        "title": {
+          "en": "A button has been pressed",
+          "nl": "Een knop is ingedrukt",
+          "de": "Ein Schalter ist gedrückt"
+        },
+        "hint": {
+          "en": "This card will trigger on any button pressed and provides the scene tokens.",
+          "nl": "Deze kaart wordt geactiveerd bij iedere knop die ingedrukt wordt en biedt de scene tokens aan.",
+          "de": "Diese Karte wird mit jeder gedrücktem Schalter aktiviert und liefert den scene token."
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=ZW_MTN577099"
+          }
+        ],
+        "tokens": [
+          {
+            "name": "scene",
+            "type": "string",
+            "title": {
+              "en": "scene",
+              "nl": "scene",
+              "de": "Szene"
+            },
+            "example": {
+              "en": "Button pressed (test)"
+            }
+          }
+        ]
+      },
+      {
+        "id": "trigger_button1_scene",
+        "title": {
+          "en": "A scene has been activated",
+          "nl": "Een scene is geactiveerd",
+          "de": "Eine Szene wurde aktiviert"
+        },
+        "hint": {
+          "en": "This card will only get triggered if the scene matches the state of the dropdown fields.",
+          "nl": "Deze kaart wordt alleen geactiveerd wanneer de scene overeenkomt met de toestand van de gekozen opties.",
+          "de": "Diese Karte wird nur aktiviert wenn die Szene mit dem Status im Dropdown-Feld übereinstimmt."
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=ZW_MTN577099"
+          },
+          {
+            "name": "scene",
+            "type": "autocomplete"
+          }
+        ]
+      },
+      {
+        "id": "trigger_button2_button",
+        "title": {
+          "en": "A button has been pressed",
+          "nl": "Een knop is ingedrukt",
+          "de": "Ein Schalter ist gedrückt"
+        },
+        "hint": {
+          "en": "This card will trigger on any button pressed and provides the scene tokens.",
+          "nl": "Deze kaart wordt geactiveerd bij iedere knop die ingedrukt wordt en biedt de scene tokens aan.",
+          "de": "Diese Karte wird mit jeder gedrücktem Schalter aktiviert und liefert den scene token."
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=x"
+          }
+        ],
+        "tokens": [
+          {
+            "name": "button",
+            "type": "string",
+            "title": {
+              "en": "button",
+              "nl": "knop",
+              "de": "Schalter"
+            },
+            "example": {
+              "en": "0"
+            }
+          },
+          {
+            "name": "scene",
+            "type": "string",
+            "title": {
+              "en": "scene",
+              "nl": "scene",
+              "de": "Szene"
+            },
+            "example": {
+              "en": "Button pressed (test)"
+            }
+          }
+        ]
+      },
+      {
+        "id": "trigger_button2_scene",
+        "title": {
+          "en": "A scene has been activated",
+          "nl": "Een scene is geactiveerd",
+          "de": "Eine Szene wurde aktiviert"
+        },
+        "hint": {
+          "en": "This card will only get triggered if the scene matches the state of the dropdown fields.",
+          "nl": "Deze kaart wordt alleen geactiveerd wanneer de scene overeenkomt met de toestand van de gekozen opties.",
+          "de": "Diese Karte wird nur aktiviert wenn die Szene mit dem Status im Dropdown-Feld übereinstimmt."
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=x"
+          },
+          {
+            "name": "button",
+            "type": "autocomplete"
+          },
+          {
+            "name": "scene",
+            "type": "autocomplete"
+          }
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "id": "action_ZW_DIM_startLevelChange",
+        "title": {
+          "en": "Start dim level change",
+          "nl": "Start helderheid transitie"
+        },
+        "hint": {
+          "en": "This action card will trigger the start of a dim level change in the set direction. \nDuration (for the change in dim-level from 0-100%) can be set by using the transition symbol. \nIf not set, factory default duration is used.",
+          "nl": "Deze actie kaart start een helderheids transitie in de ingestelde richting. \nTransitie duur (voor de transitie in helderheid van 0-100%) kan ingesteld worden met behulp van de transitie symbool. \nWanneer niet ingesteld, dan wordt de standaard duur gebruikt."
+        },
+        "duration": true,
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ZW_MTN577099"
+          },
+          {
+            "name": "direction",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "0",
+                "label": {
+                  "en": "Increase dim level",
+                  "nl": "Toenemende helderheid"
+                }
+              },
+              {
+                "id": "1",
+                "label": {
+                  "en": "Decrease dim level",
+                  "nl": "Afnemende helderheid"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "action_ZW_DIM_stopLevelChange",
+        "title": {
+          "en": "Stop dim level change",
+          "nl": "Stop helderheid transitie"
+        },
+        "hint": {
+          "en": "This action card will trigger the stop of a dim level change.",
+          "nl": "Deze actie kaart stopt de helderheids transitie."
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=ZW_MTN577099"
+          }
+        ]
+      },
+      {
+        "id": "schneider_dim_startLevelChange",
+        "title": {
+          "en": "Start dim level change",
+          "nl": "Start helderheid transitie"
+        },
+        "hint": {
+          "en": "This action card will start a dim level change in the set direction. \nDim duration is set in device settings.",
+          "nl": "Deze actiekaart start een dimniveauverandering in de ingestelde richting. \nDimduur is ingesteld in apparaatinstellingen."
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ZW_MTN507801"
+          },
+          {
+            "name": "direction",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "0",
+                "label": {
+                  "en": "Increase dim level",
+                  "nl": "Toenemende helderheid"
+                }
+              },
+              {
+                "id": "1",
+                "label": {
+                  "en": "Decrease dim level",
+                  "nl": "Afnemende helderheid"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "schneider_dim_stopLevelChange",
+        "title": {
+          "en": "Stop dim level change",
+          "nl": "Stop helderheid transitie"
+        },
+        "hint": {
+          "en": "This action card will stop a dim level change.",
+          "nl": "Deze actie kaart start een helderheids transitie in de ingestelde richting."
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ZW_MTN507801"
+          }
+        ]
+      },
+      {
+        "id": "schneider_dim_startToggleLevelChange",
+        "title": {
+          "en": "Start dim level change (toggle direction)",
+          "nl": "Start helderheid transitie (wisselrichting)"
+        },
+        "hint": {
+          "en": "This action card will start a dim level change, and toggle dim direction (up/down) for every time it is invoked. \nDim duration is set in device settings.",
+          "nl": "Deze actiekaart activeert het begin van een dimniveauverandering en wisselt van richting (omhoog/omlaag). \nDe dimduur wordt ingesteld in apparaatinstellingen."
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ZW_MTN507801"
+          },
+          {
+            "name": "roll_over",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "0",
+                "label": {
+                  "en": "Stop level change at min/max brightness"
+                }
+              },
+              {
+                "id": "1",
+                "label": {
+                  "en": "Cycle brightness between min/max"
+                }
+              }
+            ],
+            "label": {
+              "en": "Dimming behavior"
+            },
+            "hint": {
+              "en": "Enable this to toggle dim direction when min/max brightness is reached."
+            }
+          }
+        ]
+      },
+      {
+        "id": "schneider_dim_stopToggleLevelChange",
+        "title": {
+          "en": "Stop dim level change (toggle direction)",
+          "nl": "Stop helderheid transitie (wisselrichting)"
+        },
+        "hint": {
+          "en": "This action card will trigger the stop of a toggled dim level change.",
+          "nl": "Deze actiekaart activeert de stop van een omgeschakeld dimniveau wijzigen"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ZW_MTN507801"
+          }
+        ]
+      },
+      {
+        "id": "schneider_dim_startLevelChange",
+        "title": {
+          "en": "Start dim level change",
+          "nl": "Start helderheid transitie"
+        },
+        "hint": {
+          "en": "This action card will start a dim level change in the set direction. \nDim duration is set in device settings.",
+          "nl": "Deze actiekaart start een dimniveauverandering in de ingestelde richting. \nDimduur is ingesteld in apparaatinstellingen."
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ZW_MTN507900"
+          },
+          {
+            "name": "direction",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "0",
+                "label": {
+                  "en": "Increase dim level",
+                  "nl": "Toenemende helderheid"
+                }
+              },
+              {
+                "id": "1",
+                "label": {
+                  "en": "Decrease dim level",
+                  "nl": "Afnemende helderheid"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "schneider_dim_stopLevelChange",
+        "title": {
+          "en": "Stop dim level change",
+          "nl": "Stop helderheid transitie"
+        },
+        "hint": {
+          "en": "This action card will stop a dim level change.",
+          "nl": "Deze actie kaart start een helderheids transitie in de ingestelde richting."
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ZW_MTN507900"
+          }
+        ]
+      },
+      {
+        "id": "schneider_dim_startToggleLevelChange",
+        "title": {
+          "en": "Start dim level change (toggle direction)",
+          "nl": "Start helderheid transitie (wisselrichting)"
+        },
+        "hint": {
+          "en": "This action card will start a dim level change, and toggle dim direction (up/down) for every time it is invoked. \nDim duration is set in device settings.",
+          "nl": "Deze actiekaart activeert het begin van een dimniveauverandering en wisselt van richting (omhoog/omlaag). \nDe dimduur wordt ingesteld in apparaatinstellingen."
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ZW_MTN507900"
+          },
+          {
+            "name": "roll_over",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "0",
+                "label": {
+                  "en": "Stop level change at min/max brightness"
+                }
+              },
+              {
+                "id": "1",
+                "label": {
+                  "en": "Cycle brightness between min/max"
+                }
+              }
+            ],
+            "label": {
+              "en": "Dimming behavior"
+            },
+            "hint": {
+              "en": "Enable this to toggle dim direction when min/max brightness is reached."
+            }
+          }
+        ]
+      },
+      {
+        "id": "schneider_dim_stopToggleLevelChange",
+        "title": {
+          "en": "Stop dim level change (toggle direction)",
+          "nl": "Stop helderheid transitie (wisselrichting)"
+        },
+        "hint": {
+          "en": "This action card will trigger the stop of a toggled dim level change.",
+          "nl": "Deze actiekaart activeert de stop van een omgeschakeld dimniveau wijzigen"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ZW_MTN507900"
+          }
+        ]
+      }
+    ]
+  },
   "drivers": [
     {
       "id": "ZB_1GANG_DIMMER_1",
@@ -684,13 +1111,6 @@
         "associationGroups": [
           1
         ],
-        "associationGroupsOptions": {
-          "1": {
-            "hint": {
-              "en": "Controls associated devices"
-            }
-          }
-        },
         "zwaveAllianceProductId": 319,
         "zwaveAllianceProductDocumentation": "https://products.z-wavealliance.org/products/319",
         "learnmode": {
@@ -773,13 +1193,6 @@
         "associationGroups": [
           1
         ],
-        "associationGroupsOptions": {
-          "1": {
-            "hint": {
-              "en": "Controls associated devices"
-            }
-          }
-        },
         "learnmode": {
           "instruction": {
             "en": "Press the button on your device three times"
@@ -829,13 +1242,6 @@
         "associationGroups": [
           1
         ],
-        "associationGroupsOptions": {
-          "1": {
-            "hint": {
-              "en": "Controls associated devices"
-            }
-          }
-        },
         "learnmode": {
           "instruction": {
             "en": "Press the button on your device three times"
@@ -951,13 +1357,6 @@
         "associationGroups": [
           1
         ],
-        "associationGroupsOptions": {
-          "1": {
-            "hint": {
-              "en": "Controls associated devices"
-            }
-          }
-        },
         "zwaveAllianceProductId": 402,
         "zwaveAllianceProductDocumentation": "https://products.z-wavealliance.org/products/402",
         "learnmode": {
@@ -1016,7 +1415,7 @@
             }
           }
         },
-        "wakeUpInterval": 30,
+        "wakeUpInterval": 900,
         "zwaveAllianceProductId": 268,
         "zwaveAllianceProductDocumentation": "https://products.z-wavealliance.org/products/268",
         "learnmode": {
@@ -1092,34 +1491,55 @@
     {
       "id": "ZW_MTN577099",
       "name": {
-        "en": "Connect Universal Super Dimmer"
+        "en": "Universal super dimmer insert"
       },
       "class": "light",
       "capabilities": [
-        "onoff",
-        "dim"
+        "dim",
+        "onoff"
       ],
+      "capabilitiesOptions": {
+        "onoff": {
+          "setOnDim": true
+        }
+      },
+      "icon": "/drivers/ZW_MTN577099/assets/icon.svg",
       "images": {
         "large": "/drivers/ZW_MTN577099/assets/images/large.png",
         "small": "/drivers/ZW_MTN577099/assets/images/small.png"
       },
       "zwave": {
         "manufacturerId": 122,
-        "productTypeId": 32769,
-        "productId": 32770,
+        "productTypeId": 16387,
+        "productId": 1,
+        "learnmode": {
+          "instruction": {
+            "en": "Press the button on your Universal super dimmer insert three times.",
+            "nl": "Druk driemaal op de knop van uw Universal super dimmer insert."
+          }
+        },
+        "unlearnmode": {
+          "instruction": {
+            "en": "Press the button on your Universal super dimmer insert three times.",
+            "nl": "Druk driemaal op de knop van uw Universal super dimmer insert."
+          }
+        },
         "associationGroups": [
-          1
+          1,
+          2
         ],
         "associationGroupsOptions": {
           "1": {
             "hint": {
-              "en": "Controls associated devices"
+              "en": "Lifeline association group (do not change)",
+              "nl": "Lifeline association group (niet aanpassen)"
             }
-          }
-        },
-        "learnmode": {
-          "instruction": {
-            "en": "Press the button on your device three times"
+          },
+          "2": {
+            "hint": {
+              "en": "Control other devices (SWITCH_MULTILEVEL_-SET, -START_LEVEL_CHANGE, -STOP_LEVEL_CHANGE, required for faster UI response)",
+              "nl": "Stuur andere schakelaars / dimmers aan (SSWITCH_MULTILEVEL_-SET, -START_LEVEL_CHANGE, -STOP_LEVEL_CHANGE nodig voor snelle reactie van de interface)"
+            }
           }
         }
       },
@@ -1437,241 +1857,5 @@
         }
       ]
     }
-  ],
-  "flow": {
-    "actions": [
-      {
-        "id": "schneider_dim_startLevelChange",
-        "title": {
-          "en": "Start dim level change",
-          "nl": "Start helderheid transitie"
-        },
-        "hint": {
-          "en": "This action card will start a dim level change in the set direction. \nDim duration is set in device settings.",
-          "nl": "Deze actiekaart start een dimniveauverandering in de ingestelde richting. \nDimduur is ingesteld in apparaatinstellingen."
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=ZW_MTN507801"
-          },
-          {
-            "name": "direction",
-            "type": "dropdown",
-            "values": [
-              {
-                "id": "0",
-                "label": {
-                  "en": "Increase dim level",
-                  "nl": "Toenemende helderheid"
-                }
-              },
-              {
-                "id": "1",
-                "label": {
-                  "en": "Decrease dim level",
-                  "nl": "Afnemende helderheid"
-                }
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "schneider_dim_stopLevelChange",
-        "title": {
-          "en": "Stop dim level change",
-          "nl": "Stop helderheid transitie"
-        },
-        "hint": {
-          "en": "This action card will stop a dim level change.",
-          "nl": "Deze actie kaart start een helderheids transitie in de ingestelde richting."
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=ZW_MTN507801"
-          }
-        ]
-      },
-      {
-        "id": "schneider_dim_startToggleLevelChange",
-        "title": {
-          "en": "Start dim level change (toggle direction)",
-          "nl": "Start helderheid transitie (wisselrichting)"
-        },
-        "hint": {
-          "en": "This action card will start a dim level change, and toggle dim direction (up/down) for every time it is invoked. \nDim duration is set in device settings.",
-          "nl": "Deze actiekaart activeert het begin van een dimniveauverandering en wisselt van richting (omhoog/omlaag). \nDe dimduur wordt ingesteld in apparaatinstellingen."
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=ZW_MTN507801"
-          },
-          {
-            "name": "roll_over",
-            "type": "dropdown",
-            "values": [
-              {
-                "id": "0",
-                "label": {
-                  "en": "Stop level change at min/max brightness"
-                }
-              },
-              {
-                "id": "1",
-                "label": {
-                  "en": "Cycle brightness between min/max"
-                }
-              }
-            ],
-            "label": {
-              "en": "Dimming behavior"
-            },
-            "hint": {
-              "en": "Enable this to toggle dim direction when min/max brightness is reached."
-            }
-          }
-        ]
-      },
-      {
-        "id": "schneider_dim_stopToggleLevelChange",
-        "title": {
-          "en": "Stop dim level change (toggle direction)",
-          "nl": "Stop helderheid transitie (wisselrichting)"
-        },
-        "hint": {
-          "en": "This action card will trigger the stop of a toggled dim level change.",
-          "nl": "Deze actiekaart activeert de stop van een omgeschakeld dimniveau wijzigen"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=ZW_MTN507801"
-          }
-        ]
-      },
-      {
-        "id": "schneider_dim_startLevelChange",
-        "title": {
-          "en": "Start dim level change",
-          "nl": "Start helderheid transitie"
-        },
-        "hint": {
-          "en": "This action card will start a dim level change in the set direction. \nDim duration is set in device settings.",
-          "nl": "Deze actiekaart start een dimniveauverandering in de ingestelde richting. \nDimduur is ingesteld in apparaatinstellingen."
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=ZW_MTN507900"
-          },
-          {
-            "name": "direction",
-            "type": "dropdown",
-            "values": [
-              {
-                "id": "0",
-                "label": {
-                  "en": "Increase dim level",
-                  "nl": "Toenemende helderheid"
-                }
-              },
-              {
-                "id": "1",
-                "label": {
-                  "en": "Decrease dim level",
-                  "nl": "Afnemende helderheid"
-                }
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "schneider_dim_stopLevelChange",
-        "title": {
-          "en": "Stop dim level change",
-          "nl": "Stop helderheid transitie"
-        },
-        "hint": {
-          "en": "This action card will stop a dim level change.",
-          "nl": "Deze actie kaart start een helderheids transitie in de ingestelde richting."
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=ZW_MTN507900"
-          }
-        ]
-      },
-      {
-        "id": "schneider_dim_startToggleLevelChange",
-        "title": {
-          "en": "Start dim level change (toggle direction)",
-          "nl": "Start helderheid transitie (wisselrichting)"
-        },
-        "hint": {
-          "en": "This action card will start a dim level change, and toggle dim direction (up/down) for every time it is invoked. \nDim duration is set in device settings.",
-          "nl": "Deze actiekaart activeert het begin van een dimniveauverandering en wisselt van richting (omhoog/omlaag). \nDe dimduur wordt ingesteld in apparaatinstellingen."
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=ZW_MTN507900"
-          },
-          {
-            "name": "roll_over",
-            "type": "dropdown",
-            "values": [
-              {
-                "id": "0",
-                "label": {
-                  "en": "Stop level change at min/max brightness"
-                }
-              },
-              {
-                "id": "1",
-                "label": {
-                  "en": "Cycle brightness between min/max"
-                }
-              }
-            ],
-            "label": {
-              "en": "Dimming behavior"
-            },
-            "hint": {
-              "en": "Enable this to toggle dim direction when min/max brightness is reached."
-            }
-          }
-        ]
-      },
-      {
-        "id": "schneider_dim_stopToggleLevelChange",
-        "title": {
-          "en": "Stop dim level change (toggle direction)",
-          "nl": "Stop helderheid transitie (wisselrichting)"
-        },
-        "hint": {
-          "en": "This action card will trigger the stop of a toggled dim level change.",
-          "nl": "Deze actiekaart activeert de stop van een omgeschakeld dimniveau wijzigen"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=ZW_MTN507900"
-          }
-        ]
-      }
-    ]
-  }
+  ]
 }
