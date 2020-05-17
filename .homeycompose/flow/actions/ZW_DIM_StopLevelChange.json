@@ -1,0 +1,18 @@
+{
+  "id": "action_ZW_DIM_stopLevelChange",
+  "title": {
+    "en": "Stop dim level change",
+    "nl": "Stop helderheid transitie"
+  },
+  "hint": {
+    "en": "This action card will trigger the stop of a dim level change.",
+    "nl": "Deze actie kaart stopt de helderheids transitie."
+  },
+  "args": [
+    {
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=ZW_MTN577099"
+    }
+  ]
+}
