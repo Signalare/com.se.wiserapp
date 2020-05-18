@@ -1,0 +1,6 @@
+[
+  {
+  "id": "dimming_speed",
+  "$extends": "dimmingSpeed"
+  }
+]
