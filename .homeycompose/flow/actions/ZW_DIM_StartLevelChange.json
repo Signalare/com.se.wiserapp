@@ -1,0 +1,39 @@
+{
+	"id": "action_ZW_DIM_startLevelChange",
+	"title": {
+		"en": "Start dim level change",
+		"nl": "Start helderheid transitie"
+	},
+	"hint": {
+		"en": "This action card will trigger the start of a dim level change in the set direction. \nDuration (for the change in dim-level from 0-100%) can be set by using the transition symbol. \nIf not set, factory default duration is used.",
+		"nl": "Deze actie kaart start een helderheids transitie in de ingestelde richting. \nTransitie duur (voor de transitie in helderheid van 0-100%) kan ingesteld worden met behulp van de transitie symbool. \nWanneer niet ingesteld, dan wordt de standaard duur gebruikt."
+	},
+	"duration": true,
+	"args": [
+		{
+			"type": "device",
+			"name": "device",
+			"filter": "driver_id=ZW_MTN577099"
+        },
+		{
+			"name": "direction",
+			"type": "dropdown",
+			"values": [
+				{
+					"id": "0",
+					"label": {
+						"en": "Increase dim level",
+						"nl": "Toenemende helderheid"
+					}
+            },
+				{
+					"id": "1",
+					"label": {
+						"en": "Decrease dim level",
+						"nl": "Afnemende helderheid"
+					}
+            }
+          ]
+      }
+    ]
+}

@@ -1,0 +1,28 @@
+{
+  "id": "trigger_button2_scene",
+  "title": {
+    "en": "A scene has been activated",
+    "nl": "Een scene is geactiveerd",
+    "de": "Eine Szene wurde aktiviert"
+  },
+  "hint": {
+    "en": "This card will only get triggered if the scene matches the state of the dropdown fields.",
+    "nl": "Deze kaart wordt alleen geactiveerd wanneer de scene overeenkomt met de toestand van de gekozen opties.",
+    "de": "Diese Karte wird nur aktiviert wenn die Szene mit dem Status im Dropdown-Feld übereinstimmt."
+  },
+  "args": [
+    {
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=x"
+    },
+    {
+      "name": "button",
+      "type": "autocomplete"
+    },
+    {
+      "name": "scene",
+      "type": "autocomplete"
+    }
+  ]
+}
