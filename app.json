@@ -1,6 +1,6 @@
 {
   "id": "com.se",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "compatibility": ">=3.2.0",
   "sdk": 2,
   "brandColor": "#3DCD58",
@@ -79,7 +79,7 @@
           {
             "name": "device",
             "type": "device",
-            "filter": "driver_id=ZW_MTN577099"
+            "filter": "driver_id=ZW_MTN50x6xx"
           }
         ],
         "tokens": [
@@ -113,7 +113,7 @@
           {
             "name": "device",
             "type": "device",
-            "filter": "driver_id=ZW_MTN577099"
+            "filter": "driver_id=ZW_MTN50x6xx"
           },
           {
             "name": "scene",
@@ -212,7 +212,7 @@
           {
             "type": "device",
             "name": "device",
-            "filter": "driver_id=ZW_MTN577099"
+            "filter": "driver_id=ZW_MTN50x6xx"
           },
           {
             "name": "direction",
@@ -250,7 +250,7 @@
           {
             "name": "device",
             "type": "device",
-            "filter": "driver_id=ZW_MTN577099"
+            "filter": "driver_id=ZW_MTN50x6xx"
           }
         ]
       },
@@ -1489,9 +1489,10 @@
       ]
     },
     {
-      "id": "ZW_MTN577099",
+      "id": "ZW_MTN50x6xx",
       "name": {
-        "en": "Universal super dimmer insert"
+        "en": "Radio Sensor Cover for dimmer inserts (MTN50x6xx)",
+        "nl": "Tastsensor inzetplaat voor inbouw dimmers (MTN50x6xx)"
       },
       "class": "light",
       "capabilities": [
@@ -1503,25 +1504,28 @@
           "setOnDim": true
         }
       },
-      "icon": "/drivers/ZW_MTN577099/assets/icon.svg",
+      "icon": "/drivers/ZW_MTN50x6xx/assets/icon.svg",
       "images": {
-        "large": "/drivers/ZW_MTN577099/assets/images/large.png",
-        "small": "/drivers/ZW_MTN577099/assets/images/small.png"
+        "large": "/drivers/ZW_MTN50x6xx/assets/images/large.png",
+        "small": "/drivers/ZW_MTN50x6xx/assets/images/small.png"
       },
       "zwave": {
         "manufacturerId": 122,
         "productTypeId": 16387,
         "productId": 1,
+        "zwaveAllianceProductId": 494,
         "learnmode": {
+          "image": "/drivers/ZW_MTN50x6xx/assets/learnmode.svg",
           "instruction": {
-            "en": "Press the button on your Universal super dimmer insert three times.",
-            "nl": "Druk driemaal op de knop van uw Universal super dimmer insert."
+            "en": "Press the button on your Radio Sensor Cover for dimmer inserts (MTN50x6xx) three times.",
+            "nl": "Druk driemaal op de knop van uw Tastsensor inzetplaat voor inbouw dimmers (MTN50x6xx)."
           }
         },
         "unlearnmode": {
+          "image": "/drivers/ZW_MTN50x6xx/assets/learnmode.svg",
           "instruction": {
-            "en": "Press the button on your Universal super dimmer insert three times.",
-            "nl": "Druk driemaal op de knop van uw Universal super dimmer insert."
+            "en": "Press the button on your Radio Sensor Cover for dimmer inserts (MTN50x6xx) three times.",
+            "nl": "Druk driemaal op de knop van uw Tastsensor inzetplaat voor inbouw dimmers (MTN50x6xx)."
           }
         },
         "associationGroups": [
@@ -1543,7 +1547,30 @@
           }
         }
       },
-      "settings": []
+      "settings": [
+        {
+          "id": "dimming_speed",
+          "label": {
+            "en": "Dimming speed",
+            "nl": "Dim snelheid"
+          },
+          "hint": {
+            "en": "This parameter (196) determines the dimming speed. Values: 0 - 240 seconds, 0: Instantly. Default: 3",
+            "nl": "Deze parameter (196) bepaalt de standaard dim transitietijd in seconden. Waardes: 0 - 240 seconden, 0: Instantaan. Standaard: 3"
+          },
+          "zwave": {
+            "index": 196,
+            "size": 1,
+            "signed": false
+          },
+          "type": "number",
+          "value": 3,
+          "attr": {
+            "min": 0,
+            "max": 240
+          }
+        }
+      ]
     },
     {
       "id": "ZW_WDE00x903",

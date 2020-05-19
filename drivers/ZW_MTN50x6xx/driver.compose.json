@@ -1,7 +1,8 @@
 {
-  "id": "mtn577099",
+  "id": "ZW_MTN50x6xx",
   "name": {
-    "en": "Universal super dimmer insert"
+    "en": "Radio Sensor Cover for dimmer inserts (MTN50x6xx)",
+    "nl": "Tastsensor inzetplaat voor inbouw dimmers (MTN50x6xx)"
   },
   "class": "light",
   "capabilities": [
@@ -22,13 +23,16 @@
     "manufacturerId": 122,
     "productTypeId": 16387,
     "productId": 1,
+    "zwaveAllianceProductId": 494,
     "learnmode": {
+      "image": "{{driverAssetsPath}}/learnmode.svg",
       "instruction": {
         "en": "Press the button on your {{driverNameEn}} three times.",
         "nl": "Druk driemaal op de knop van uw {{driverNameNl}}."
       }
     },
     "unlearnmode": {
+      "image": "{{driverAssetsPath}}/learnmode.svg",
       "instruction": {
         "en": "Press the button on your {{driverNameEn}} three times.",
         "nl": "Druk driemaal op de knop van uw {{driverNameNl}}."

@@ -13,7 +13,7 @@
 		{
 			"type": "device",
 			"name": "device",
-			"filter": "driver_id=ZW_MTN577099"
+			"filter": "driver_id=ZW_MTN50x6xx"
         },
 		{
 			"name": "direction",
