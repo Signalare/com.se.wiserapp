@@ -3,6 +3,9 @@
 Adds support for Schnieder Electric Wiser & Connect (formerly Merten) devices
 
 ### Changelog
+0.1.2
+- Corrected driver information - ZW-MTN577099 -> ZW-MTN50x6xx
+
 0.1.1
 - Added support for the Schneider Connect Series Z-wave devices
 - Added driver ZW-MTN506504: 
