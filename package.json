@@ -1,5 +1,5 @@
 {
-  "name": "com.se",
+  "name": "com.se.wiserapp",
   "version": "0.1.2",
   "main": "app.js",
   "devDependencies": {
