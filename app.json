@@ -500,8 +500,8 @@
         "onoff"
       ],
       "images": {
-        "large": "/drivers/ZB_1GANG_DIMMER_1/assets/assets/images/large.png",
-        "small": "/drivers/ZB_1GANG_DIMMER_1/assets/assets/images/small.png"
+        "large": "/drivers/ZB_1GANG_DIMMER_1/assets/images/large.png",
+        "small": "/drivers/ZB_1GANG_DIMMER_1/assets/images/small.png"
       },
       "zigbee": {
         "manufacturerName": "Schneider Electric",
@@ -617,8 +617,8 @@
         "onoff"
       ],
       "images": {
-        "large": "/drivers/ZB_NHROTARY_DIMMER_1/assets/assets/images/large.png",
-        "small": "/drivers/ZB_NHROTARY_DIMMER_1/assets/assets/images/small.png"
+        "large": "/drivers/ZB_NHROTARY_DIMMER_1/assets/images/large.png",
+        "small": "/drivers/ZB_NHROTARY_DIMMER_1/assets/images/small.png"
       },
       "zigbee": {
         "manufacturerName": "Schneider Electric",
@@ -734,8 +734,8 @@
         "onoff"
       ],
       "images": {
-        "large": "/drivers/ZB_PUCK_DIMMER_1/assets/assets/images/large.png",
-        "small": "/drivers/ZB_PUCK_DIMMER_1/assets/assets/images/small.png"
+        "large": "/drivers/ZB_PUCK_DIMMER_1/assets/images/large.png",
+        "small": "/drivers/ZB_PUCK_DIMMER_1/assets/images/small.png"
       },
       "zigbee": {
         "manufacturerName": "Schneider Electric",
@@ -850,8 +850,8 @@
         "onoff"
       ],
       "images": {
-        "large": "/drivers/ZB_PUCK_SWITCH_1/assets/assets/images/large.png",
-        "small": "/drivers/ZB_PUCK_SWITCH_1/assets/assets/images/small.png"
+        "large": "/drivers/ZB_PUCK_SWITCH_1/assets/images/large.png",
+        "small": "/drivers/ZB_PUCK_SWITCH_1/assets/images/small.png"
       },
       "zigbee": {
         "manufacturerName": "Schneider Electric",
