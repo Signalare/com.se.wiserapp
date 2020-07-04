@@ -1,8 +1,8 @@
 {
   "id": "com.se.wiserapp",
-  "version": "0.1.0",
-  "compatibility": ">=3.2.0",
-  "sdk": 2,
+  "version": "0.2.0",
+  "compatibility": ">=5.0.0",
+  "sdk": 3,
   "brandColor": "#3DCD58",
   "name": {
     "en": "Schneider Electric Wiser"

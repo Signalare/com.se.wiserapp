@@ -1,83 +1,89 @@
 'use strict';
 
-const { ZigBeeDevice } = require('homey-meshdriver');
+const { ZigBeeDevice } = require('homey-zigbeedriver');
+const { CLUSTER } = require('zigbee-clusters');
+require('../../lib/ZB_WiserOnOffCluster');
+require('../../lib/ZB_WiserBallastConfigurationCluster');
+
+// This is for the raw logging of zigbee trafic. Otherwise not used.
+// const { Util } = require('homey-zigbeedriver');
+// Util.debugZigbeeClusters(true);
 
 class ZB_NHROTARY_DIMMER_1 extends ZigBeeDevice {
 
-  onMeshInit() {
+  async onNodeInit() {
+    const { manifest } = this.driver;
+    await this.setSettings({ zb_endpoint_descriptors: manifest.zigbee.endpoints });
+
     // Developer options
-    // this.printNode();
-    // this.enableDebug();
+    this.printNode();
+    this.enableDebug();
 
-    // Register onoff capability
-    if (this.hasCapability('onoff')) {
-      this.registerCapability('onoff', 'genOnOff', { endpoint: 0 });
-      this.registerAttrReportListener('genOnOff', 'onOff', 1, 60, 1, this.onOffReport.bind(this), 0)
-        .catch(err => {
-          this.error(err);
-        });
-      this._attrReportListeners['2_genOnOff'] = this._attrReportListeners['2_genOnOff'] || {};
-      this._attrReportListeners['2_genOnOff']['onOff'] = this.onOffReport.bind(this);
-    }
-
-    // Register dim capability
-    if (this.hasCapability('dim')) {
-      this.registerCapability('dim', 'genLevelCtrl', { endpoint: 0 });
-      this.registerAttrReportListener('genLevelCtrl', 'currentLevel', 3, 60, 3, this.dimLevelReport.bind(this), 0)
-        .catch(err => {
-          this.error(err);
-        });
-      this._attrReportListeners['2_genLevelCtrl'] = this._attrReportListeners['2_genLevelCtrl'] || {};
-      this._attrReportListeners['2_genLevelCtrl']['currentLevel'] = this.dimLevelReport.bind(this);
-    }
+    this.registerCapability('onoff', CLUSTER.ON_OFF);
+    this.registerCapability('dim', CLUSTER.LEVEL_CONTROL);
 
     this.log('Driver has been initied');
   }
 
-  // onOffReport
-  onOffReport(value) {
-    const parsedValue = (value === 1);
-    this.setCapabilityValue('onoff', parsedValue);
-  }
-
-  // dimLevelReport
-  dimLevelReport(value) {
-    const parsedValue = value / 254;
-    this.setCapabilityValue('dim', parsedValue);
-  }
-
-  async onSettings(oldSettingsObj, newSettingsObj, changedKeysArr) {
-    // onLevel
-    if (changedKeysArr.includes('onlevel_memory') || changedKeysArr.includes('onlevel_level')) {
-      let onLevel = 255;
-      if (!newSettingsObj['onlevel_memory']) {
-        onLevel = Math.round(2.555556 * newSettingsObj['onlevel_level'] - 1.555556); // 1-100=1-254
+  async onSettings({ oldSettings, newSettings, changedKeys }) {
+    // Level Control - onLevel
+    if (changedKeys.includes('onlevel_memory') || changedKeys.includes('onlevel_level')) {
+      let _onLevel = 255;
+      if (!newSettings['onlevel_memory']) {
+        _onLevel = Math.round(2.555556 * newSettings['onlevel_level'] - 1.555556); // 1-100=1-254
       }
-      this.log('onLevel', onLevel);
-      this.node.endpoints[0].clusters['genLevelCtrl'].write('onLevel', onLevel)
-        .catch(err => {
-          this.error(err);
-        });
+      const result = await this.zclNode.endpoints[3].clusters.levelControl
+        .writeAttributes({ onLevel: _onLevel });
+
+      this.log('[SETTINGS]', '[Write Attribute]', '[Level Control - onLevel]', `[Value = ${_onLevel}] Result:\n`, result);
     }
 
-    // minLevel
-    if (changedKeysArr.includes('brightness_min')) {
-      const minLevel = Math.round(6.487179 * newSettingsObj['brightness_min'] - 5.487179); // 1-40=1-254
-      this.log('minLevel', minLevel);
-      this.node.endpoints[0].clusters['lightingBallastCfg'].write('minLevel', minLevel)
-        .catch(err => {
-          this.error(err);
-        });
+    // Ballast Configuration - minLevel
+    if (changedKeys.includes('brightness_min')) {
+      const _minLevel = Math.round(6.487179 * newSettings['brightness_min'] - 5.487179); // 1-40=1-254
+      const result = await this.zclNode.endpoints[3].clusters.ballastConfiguration
+        .writeAttributes({ minLevel: _minLevel });
+
+      this.log('[SETTINGS]', '[Write Attribute]', '[Ballast Configuration - minLevel]', `[Value = ${_minLevel}] Result:\n`, result);
     }
 
-    // maxLevel
-    if (changedKeysArr.includes('brightness_max')) {
-      const maxLevel = Math.round(6.325 * newSettingsObj['brightness_max'] - 378.5); // 60-100=1-254
-      this.log('maxLevel', maxLevel);
-      this.node.endpoints[0].clusters['lightingBallastCfg'].write('maxLevel', maxLevel)
-        .catch(err => {
-          this.error(err);
-        });
+    // Ballast Configuration - maxLevel
+    if (changedKeys.includes('brightness_max')) {
+      const _maxLevel = Math.round(6.325 * newSettings['brightness_max'] - 378.5); // 60-100=1-254
+      const result = await this.zclNode.endpoints[3].clusters.ballastConfiguration
+        .writeAttributes({ maxLevel: _maxLevel });
+
+      this.log('[SETTINGS]', '[Write Attribute]', '[Ballast Configuration - maxLevel]', `[Value = ${_maxLevel}] Result:\n`, result);
+    }
+
+    // Ballast Configuration - rlMode
+    if (changedKeys.includes('rl_mode')) {
+      let _rlMode = 0;
+      if (newSettings['rl_mode']) {
+        _rlMode = 3;
+      }
+      const result = await this.zclNode.endpoints[3].clusters.ballastConfiguration
+        .writeAttributes({ rlMode: _rlMode });
+
+      this.log('[SETTINGS]', '[Write Attribute]', '[Ballast Configuration - rlMode]', `[Value = ${_rlMode}] Result:\n`, result);
+    }
+
+    // On/Off - offTimer
+    if (changedKeys.includes('onoff_offtimer')) {
+      const _offTimer = newSettings['onoff_offtimer'];
+      const result = await this.zclNode.endpoints[3].clusters.onOff
+        .writeAttributes({ offTimer: _offTimer });
+
+      this.log('[SETTINGS]', '[Write Attribute]', '[On/Off - offTimer]', `[Value = ${_offTimer}] Result:\n`, result);
+    }
+
+    // On/Off - preWarning
+    if (changedKeys.includes('onoff_prewarning')) {
+      const _preWarning = newSettings['onoff_prewarning'];
+      const result = await this.zclNode.endpoints[3].clusters.onOff
+        .writeAttributes({ preWarning: _preWarning });
+
+      this.log('[SETTINGS]', '[Write Attribute]', '[On/Off - preWarning]', `[Value = ${_preWarning}] Result:\n`, result);
     }
   }
 
