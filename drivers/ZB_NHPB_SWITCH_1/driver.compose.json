@@ -1,7 +1,7 @@
 {
-  "id": "ZB_PUCK_SWITCH_1",
+  "id": "ZB_NHPB_SWITCH_1",
   "name": {
-    "en": "Micro Module Switch"
+    "en": "Push button switch"
   },
   "class": "light",
   "capabilities": [
@@ -13,10 +13,10 @@
   },
   "zigbee": {
     "manufacturerName": "Schneider Electric",
-    "productId": "PUCK/SWITCH/1",
+    "productId": "NHPB/SWITCH/1",
     "learnmode": {
       "instruction": {
-        "en": "Toggle the pair button or an attached wall switch 3 times quickly.\n\nIf pairing does not automatically start, try toggle the pair button or attached wall switch 3 times quickly, then hold it down until the LED blinks red rapidly (it takes more than 20 seconds) and then try pairing the device again."
+        "en": "Toggle (push) the button 3 times quickly.\n\nIf pairing does not automatically start, try toggle the button 3 times quickly, then hold it down until the LED blinks red rapidly (it takes more than 20 seconds) and then try pairing the device again."
       }
     },
     "endpoints": {
@@ -27,10 +27,13 @@
           4,
           5,
           6,
-          2821
+          8,
+          769
         ],
         "bindings": [
-          6
+          6,
+          8,
+          769
         ]
       },
       "21": {
