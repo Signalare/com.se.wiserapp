@@ -3,6 +3,9 @@
 Adds support for Schnieder Electric Wiser devices
 
 ### Changelog
+0.2.1
+- Fix: Force device to update capability values when starting app.
+
 0.2.0
 - Rewrite of all zigbee drivers to support SDK 3
 - Added zigbee driver ZB_NHPB_SWITCH_1: Push button switch (WDE002476, WDE003476, WDE004476)
