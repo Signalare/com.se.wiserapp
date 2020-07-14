@@ -8,8 +8,8 @@
     "homey": "^2.5.1"
   },
   "dependencies": {
-    "homey-zigbeedriver": "^1.1.0",
-    "zigbee-clusters": "^1.2.0"
+    "homey-zigbeedriver": "^1.2.0",
+    "zigbee-clusters": "^1.2.1"
   },
   "engines": {
     "node": ">=12.16.1"

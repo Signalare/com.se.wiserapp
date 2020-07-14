@@ -3,6 +3,10 @@
 Adds support for Schnieder Electric Wiser devices
 
 ### Changelog
+0.2.2
+- New paired devices with dimming capability will remember brigthness between on/off by default.
+- Updated homey-zigbeedriver@1.2.0, zigbee-clusters@1.2.1
+
 0.2.1
 - Fix: Force device to update capability values when starting app.
 

@@ -77,7 +77,7 @@
         {
           "id": "onlevel_memory",
           "type": "checkbox",
-          "value": false,
+          "value": true,
           "label": {
             "en": "Remember brigthness level"
           }
