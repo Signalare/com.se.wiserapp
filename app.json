@@ -1,6 +1,6 @@
 {
   "id": "com.se.wiserapp",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "brandColor": "#3DCD58",
@@ -141,7 +141,7 @@
             {
               "id": "onlevel_memory",
               "type": "checkbox",
-              "value": false,
+              "value": true,
               "label": {
                 "en": "Remember brigthness level"
               }
@@ -421,7 +421,7 @@
             {
               "id": "onlevel_memory",
               "type": "checkbox",
-              "value": false,
+              "value": true,
               "label": {
                 "en": "Remember brigthness level"
               }
@@ -610,7 +610,7 @@
             {
               "id": "onlevel_memory",
               "type": "checkbox",
-              "value": false,
+              "value": true,
               "label": {
                 "en": "Remember brigthness level"
               }
