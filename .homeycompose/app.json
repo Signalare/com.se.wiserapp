@@ -1,0 +1,68 @@
+{
+  "id": "com.se.wiserapp",
+  "version": "0.2.2",
+  "compatibility": ">=5.0.0",
+  "sdk": 3,
+  "brandColor": "#3DCD58",
+  "name": {
+    "en": "Schneider Electric Wiser"
+  },
+  "description": {
+    "en": "A smarter home with Schneider."
+  },
+  "tags": {
+    "en": [
+      "Schneider",
+      "Wiser",
+      "Light",
+      "Lights",
+      "Exxact",
+      "Zigbee",
+      "Switch",
+      "Rotary",
+      "LED"
+    ]
+  },
+  "category": [
+    "lights"
+  ],
+  "permissions": [],
+  "images": {
+    "large": "/assets/images/large.png",
+    "small": "/assets/images/small.png"
+  },
+  "author": {
+    "name": "Marcus Hermansson",
+    "email": "marcus.hermansson@signalare.se"
+  },
+  "contributors": {
+    "developers": [
+      {
+        "name": "Johan Bendz",
+        "email": "johan_bendz@hotmail.com"
+      },
+      {
+        "name": "Marius Stedjan"
+      },
+      {
+        "name": "Stefan Ekstam",
+        "email": "stefan.ekstam@digitalkraft.se"
+      },
+      {
+        "name": "Ted Tolboom",
+        "email": "dTNL.Homey@gmail.com"
+      }
+    ]
+  },
+  "contributing": {
+    "donate": {
+      "paypal": {
+        "username": "h3rmansson"
+      }
+    }
+  },
+  "bugs": {
+    "url": "https://github.com/Signalare/com.se.wiserapp/issues"
+  },
+  "source": "https://github.com/Signalare/com.se.wiserapp"
+}

@@ -1,0 +1,11 @@
+{
+  "0.2.0": {
+    "en": "Rewrite of all zigbee drivers to support SDK 3, Added support for Push button switch (WDE002476, WDE003476, WDE004476)"
+  },
+  "0.2.1": {
+    "en": "Minor fixes"
+  },
+  "0.2.2": {
+    "en": "New paired devices with dimming capability will remember brigthness between on/off by default."
+  }
+}

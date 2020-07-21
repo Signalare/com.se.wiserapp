@@ -9,18 +9,41 @@
     "onoff"
   ],
   "images": {
-    "large": "/drivers/ZB_1GANG_DIMMER_1/assets/images/large.png",
-    "small": "/drivers/ZB_1GANG_DIMMER_1/assets/images/small.png"
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
   },
   "zigbee": {
     "manufacturerName": "Schneider Electric",
     "productId": "1GANG/DIMMER/1",
-    "deviceId": 257,
-    "profileId": 260,
     "learnmode": {
-      "image": "/drivers/ZB_1GANG_DIMMER_1/assets/images/learnmode.svg",
       "instruction": {
         "en": "Toggle (push) the button 3 times quickly.\n\nIf pairing does not automatically start, try toggle the button 3 times quickly, then hold it down until the LED blinks red rapidly (it takes more than 20 seconds) and then try pairing the device again."
+      }
+    },
+    "endpoints": {
+      "3": {
+        "clusters": [
+          0,
+          3,
+          4,
+          5,
+          6,
+          8,
+          769
+        ],
+        "bindings": [
+          6,
+          8,
+          769
+        ]
+      },
+      "21": {
+        "clusters": [
+
+        ],
+        "bindings": [
+
+        ]
       }
     }
   },
@@ -54,7 +77,7 @@
         {
           "id": "onlevel_memory",
           "type": "checkbox",
-          "value": false,
+          "value": true,
           "label": {
             "en": "Remember brigthness level"
           }
@@ -110,6 +133,58 @@
           "attr": {
             "min": 60,
             "max": 100
+          }
+        }
+      ]
+    },
+    {
+      "id": "rl_mode",
+      "type": "checkbox",
+      "value": false,
+      "label": {
+        "en": "RL Mode"
+      }
+    },
+    {
+      "type": "group",
+      "label": {
+        "en": "Timer"
+      },
+      "children": [
+        {
+          "id": "onoff_offtimer",
+          "type": "number",
+          "label": {
+            "en": "Off timer"
+          },
+          "hint": {
+            "en": "0=disabled"
+          },
+          "value": 0,
+          "units": {
+            "en": "s"
+          },
+          "attr": {
+            "min": 0,
+            "max": 86400
+          }
+        },
+        {
+          "id": "onoff_prewarning",
+          "type": "number",
+          "label": {
+            "en": "Prewarning"
+          },
+          "hint": {
+            "en": "Indicates the end of the timer by slowly dimming down 0=disabled"
+          },
+          "value": 0,
+          "units": {
+            "en": "s"
+          },
+          "attr": {
+            "min": 0,
+            "max": 86400
           }
         }
       ]
