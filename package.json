@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "homey-zigbeedriver": "^1.2.0",
+    "homey-zwavedriver": "^1.0.3",
     "zigbee-clusters": "^1.2.1"
   },
   "engines": {

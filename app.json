@@ -65,6 +65,127 @@
     "url": "https://github.com/Signalare/com.se.wiserapp/issues"
   },
   "source": "https://github.com/Signalare/com.se.wiserapp",
+  "flow": {
+    "triggers": [
+      {
+        "id": "trigger_button1_button",
+        "title": {
+          "en": "A button has been pressed",
+          "nl": "Een knop is ingedrukt",
+          "de": "Ein Schalter ist gedrückt"
+        },
+        "hint": {
+          "en": "This card will trigger on any button pressed and provides the scene tokens.",
+          "nl": "Deze kaart wordt geactiveerd bij iedere knop die ingedrukt wordt en biedt de scene tokens aan.",
+          "de": "Diese Karte wird mit jeder gedrücktem Schalter aktiviert und liefert den scene token."
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=ZW_MTN50x6xx"
+          }
+        ],
+        "tokens": [
+          {
+            "name": "scene",
+            "type": "string",
+            "title": {
+              "en": "scene",
+              "nl": "scene",
+              "de": "Szene"
+            },
+            "example": {
+              "en": "Button pressed (test)"
+            }
+          }
+        ]
+      },
+      {
+        "id": "trigger_button1_scene",
+        "title": {
+          "en": "A scene has been activated",
+          "nl": "Een scene is geactiveerd",
+          "de": "Eine Szene wurde aktiviert"
+        },
+        "hint": {
+          "en": "This card will only get triggered if the scene matches the state of the dropdown fields.",
+          "nl": "Deze kaart wordt alleen geactiveerd wanneer de scene overeenkomt met de toestand van de gekozen opties.",
+          "de": "Diese Karte wird nur aktiviert wenn die Szene mit dem Status im Dropdown-Feld übereinstimmt."
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=ZW_MTN50x6xx"
+          },
+          {
+            "name": "scene",
+            "type": "autocomplete"
+          }
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "id": "action_ZW_DIM_startLevelChange",
+        "title": {
+          "en": "Start dim level change",
+          "nl": "Start helderheid transitie"
+        },
+        "hint": {
+          "en": "This action card will trigger the start of a dim level change in the set direction. \nDuration (for the change in dim-level from 0-100%) can be set by using the transition symbol. \nIf not set, factory default duration is used.",
+          "nl": "Deze actie kaart start een helderheids transitie in de ingestelde richting. \nTransitie duur (voor de transitie in helderheid van 0-100%) kan ingesteld worden met behulp van de transitie symbool. \nWanneer niet ingesteld, dan wordt de standaard duur gebruikt."
+        },
+        "duration": true,
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ZW_MTN50x6xx"
+          },
+          {
+            "name": "direction",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "0",
+                "label": {
+                  "en": "Increase dim level",
+                  "nl": "Toenemende helderheid"
+                }
+              },
+              {
+                "id": "1",
+                "label": {
+                  "en": "Decrease dim level",
+                  "nl": "Afnemende helderheid"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "action_ZW_DIM_stopLevelChange",
+        "title": {
+          "en": "Stop dim level change",
+          "nl": "Stop helderheid transitie"
+        },
+        "hint": {
+          "en": "This action card will trigger the stop of a dim level change.",
+          "nl": "Deze actie kaart stopt de helderheids transitie."
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=ZW_MTN50x6xx"
+          }
+        ]
+      }
+    ]
+  },
   "drivers": [
     {
       "id": "ZB_1GANG_DIMMER_1",
@@ -809,6 +930,90 @@
               }
             }
           ]
+        }
+      ]
+    },
+    {
+      "id": "ZW_MTN50x6xx",
+      "name": {
+        "en": "Radio Sensor Cover for dimmer inserts (MTN50x6xx)",
+        "nl": "Tastsensor inzetplaat voor inbouw dimmers (MTN50x6xx)"
+      },
+      "class": "light",
+      "capabilities": [
+        "dim",
+        "onoff"
+      ],
+      "capabilitiesOptions": {
+        "onoff": {
+          "setOnDim": true
+        }
+      },
+      "icon": "/drivers/ZW_MTN50x6xx/assets/icon.svg",
+      "images": {
+        "large": "/drivers/ZW_MTN50x6xx/assets/images/large.png",
+        "small": "/drivers/ZW_MTN50x6xx/assets/images/small.png"
+      },
+      "zwave": {
+        "manufacturerId": 122,
+        "productTypeId": 16387,
+        "productId": 1,
+        "zwaveAllianceProductId": 494,
+        "learnmode": {
+          "image": "/drivers/ZW_MTN50x6xx/assets/learnmode.svg",
+          "instruction": {
+            "en": "Press the button on your Radio Sensor Cover for dimmer inserts (MTN50x6xx) three times.",
+            "nl": "Druk driemaal op de knop van uw Tastsensor inzetplaat voor inbouw dimmers (MTN50x6xx)."
+          }
+        },
+        "unlearnmode": {
+          "image": "/drivers/ZW_MTN50x6xx/assets/learnmode.svg",
+          "instruction": {
+            "en": "Press the button on your Radio Sensor Cover for dimmer inserts (MTN50x6xx) three times.",
+            "nl": "Druk driemaal op de knop van uw Tastsensor inzetplaat voor inbouw dimmers (MTN50x6xx)."
+          }
+        },
+        "associationGroups": [
+          1,
+          2
+        ],
+        "associationGroupsOptions": {
+          "1": {
+            "hint": {
+              "en": "Lifeline association group (do not change)",
+              "nl": "Lifeline association group (niet aanpassen)"
+            }
+          },
+          "2": {
+            "hint": {
+              "en": "Control other devices (SWITCH_MULTILEVEL_-SET, -START_LEVEL_CHANGE, -STOP_LEVEL_CHANGE, required for faster UI response)",
+              "nl": "Stuur andere schakelaars / dimmers aan (SSWITCH_MULTILEVEL_-SET, -START_LEVEL_CHANGE, -STOP_LEVEL_CHANGE nodig voor snelle reactie van de interface)"
+            }
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "dimming_speed",
+          "label": {
+            "en": "Dimming speed",
+            "nl": "Dim snelheid"
+          },
+          "hint": {
+            "en": "This parameter (196) determines the dimming speed. Values: 0 - 240 seconds, 0: Instantly. Default: 3",
+            "nl": "Deze parameter (196) bepaalt de standaard dim transitietijd in seconden. Waardes: 0 - 240 seconden, 0: Instantaan. Standaard: 3"
+          },
+          "zwave": {
+            "index": 196,
+            "size": 1,
+            "signed": false
+          },
+          "type": "number",
+          "value": 3,
+          "attr": {
+            "min": 0,
+            "max": 240
+          }
         }
       ]
     }

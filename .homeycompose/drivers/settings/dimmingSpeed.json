@@ -1,0 +1,21 @@
+{
+"label": {
+  "en": "Dimming speed",
+  "nl": "Dim snelheid"
+},
+"hint": {
+  "en": "This parameter ({{zwaveParameterIndex}}) determines the dimming speed. Values: 0 - 240 seconds, 0: Instantly. Default: 3",
+  "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de standaard dim transitietijd in seconden. Waardes: 0 - 240 seconden, 0: Instantaan. Standaard: 3"
+},
+"zwave": {
+  "index": 196,
+  "size": 1,
+  "signed": false
+},
+"type": "number",
+"value": 3,
+"attr": {
+  "min": 0,
+  "max": 240
+}
+}
