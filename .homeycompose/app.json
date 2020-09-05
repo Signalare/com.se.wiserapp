@@ -1,11 +1,11 @@
 {
   "id": "com.se.wiserapp",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "brandColor": "#3DCD58",
   "name": {
-    "en": "Schneider Electric Wiser"
+    "en": "Schneider Electric"
   },
   "description": {
     "en": "A smarter home with Schneider."
@@ -14,10 +14,13 @@
     "en": [
       "Schneider",
       "Wiser",
+      "Connect",
+      "Marten",
       "Light",
       "Lights",
       "Exxact",
       "Zigbee",
+      "Z-wave",
       "Switch",
       "Rotary",
       "LED"
@@ -26,7 +29,10 @@
   "category": [
     "lights"
   ],
-  "permissions": [],
+  "permissions": [
+    "homey:wireless:zigbee",
+    "homey:wireless:zwave"
+  ],
   "images": {
     "large": "/assets/images/large.png",
     "small": "/assets/images/small.png"

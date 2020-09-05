@@ -7,5 +7,8 @@
   },
   "0.2.2": {
     "en": "New paired devices with dimming capability will remember brigthness between on/off by default."
+  },
+  "0.2.3": {
+    "en": "Added support for Z-Wave ZW_MTN50x6xx devices."
   }
 }

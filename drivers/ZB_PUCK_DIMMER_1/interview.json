@@ -1,4 +1,5 @@
 {
+
   "ids": {
     "modelId": "PUCK/DIMMER/1",
     "manufacturerName": "Schneider Electric"
@@ -38,7 +39,11 @@
                 ],
                 "id": 0,
                 "name": "zclVersion",
-                "value": 2
+                "value": 2,
+                "reportingConfiguration": {
+                  "status": "NOT_FOUND",
+                  "direction": "reported"
+                }
               },
               {
                 "acl": [
@@ -47,7 +52,11 @@
                 ],
                 "id": 1,
                 "name": "appVersion",
-                "value": 1
+                "value": 1,
+                "reportingConfiguration": {
+                  "status": "NOT_FOUND",
+                  "direction": "reported"
+                }
               },
               {
                 "acl": [
@@ -56,7 +65,11 @@
                 ],
                 "id": 2,
                 "name": "stackVersion",
-                "value": 5
+                "value": 5,
+                "reportingConfiguration": {
+                  "status": "NOT_FOUND",
+                  "direction": "reported"
+                }
               },
               {
                 "acl": [
@@ -65,7 +78,11 @@
                 ],
                 "id": 3,
                 "name": "hwVersion",
-                "value": 1
+                "value": 1,
+                "reportingConfiguration": {
+                  "status": "NOT_FOUND",
+                  "direction": "reported"
+                }
               },
               {
                 "acl": [
@@ -74,7 +91,11 @@
                 ],
                 "id": 4,
                 "name": "manufacturerName",
-                "value": "Schneider Electric"
+                "value": "Schneider Electric",
+                "reportingConfiguration": {
+                  "status": "NOT_FOUND",
+                  "direction": "reported"
+                }
               },
               {
                 "acl": [
@@ -83,7 +104,11 @@
                 ],
                 "id": 5,
                 "name": "modelId",
-                "value": "PUCK/DIMMER/1"
+                "value": "PUCK/DIMMER/1",
+                "reportingConfiguration": {
+                  "status": "NOT_FOUND",
+                  "direction": "reported"
+                }
               },
               {
                 "acl": [
@@ -92,7 +117,11 @@
                 ],
                 "id": 6,
                 "name": "dateCode",
-                "value": ""
+                "value": "",
+                "reportingConfiguration": {
+                  "status": "NOT_FOUND",
+                  "direction": "reported"
+                }
               },
               {
                 "acl": [
@@ -101,7 +130,11 @@
                 ],
                 "id": 7,
                 "name": "powerSource",
-                "value": "mains"
+                "value": "mains",
+                "reportingConfiguration": {
+                  "status": "NOT_FOUND",
+                  "direction": "reported"
+                }
               },
               {
                 "acl": [
@@ -110,28 +143,44 @@
                 ],
                 "id": 8,
                 "name": "appProfileVersion",
-                "value": 0
+                "value": 0,
+                "reportingConfiguration": {
+                  "status": "NOT_FOUND",
+                  "direction": "reported"
+                }
               },
               {
                 "acl": [
                   "readable",
                   "reportable"
                 ],
-                "id": 9
+                "id": 9,
+                "reportingConfiguration": {
+                  "status": "NOT_FOUND",
+                  "direction": "reported"
+                }
               },
               {
                 "acl": [
                   "readable",
                   "reportable"
                 ],
-                "id": 10
+                "id": 10,
+                "reportingConfiguration": {
+                  "status": "NOT_FOUND",
+                  "direction": "reported"
+                }
               },
               {
                 "acl": [
                   "readable",
                   "reportable"
                 ],
-                "id": 11
+                "id": 11,
+                "reportingConfiguration": {
+                  "status": "NOT_FOUND",
+                  "direction": "reported"
+                }
               },
               {
                 "acl": [
@@ -140,7 +189,11 @@
                 ],
                 "id": 16384,
                 "name": "swBuildId",
-                "value": "001.005.003 R"
+                "value": "001.005.003 R",
+                "reportingConfiguration": {
+                  "status": "NOT_FOUND",
+                  "direction": "reported"
+                }
               },
               {
                 "acl": [
@@ -149,7 +202,11 @@
                 ],
                 "id": 65533,
                 "name": "clusterRevision",
-                "value": 1
+                "value": 1,
+                "reportingConfiguration": {
+                  "status": "NOT_FOUND",
+                  "direction": "reported"
+                }
               }
             ],
             "commandsGenerated": [],
@@ -165,7 +222,11 @@
                   "writable",
                   "reportable"
                 ],
-                "id": 0
+                "id": 0,
+                "reportingConfiguration": {
+                  "status": "NOT_FOUND",
+                  "direction": "reported"
+                }
               },
               {
                 "acl": [
@@ -174,7 +235,11 @@
                 ],
                 "id": 65533,
                 "name": "clusterRevision",
-                "value": 1
+                "value": 1,
+                "reportingConfiguration": {
+                  "status": "NOT_FOUND",
+                  "direction": "reported"
+                }
               }
             ],
             "commandsGenerated": [
@@ -196,6 +261,10 @@
                   "data": [
                     0
                   ]
+                },
+                "reportingConfiguration": {
+                  "status": "NOT_FOUND",
+                  "direction": "reported"
                 }
               },
               {
@@ -205,7 +274,11 @@
                 ],
                 "id": 65533,
                 "name": "clusterRevision",
-                "value": 1
+                "value": 1,
+                "reportingConfiguration": {
+                  "status": "NOT_FOUND",
+                  "direction": "reported"
+                }
               }
             ],
             "commandsGenerated": [
@@ -230,35 +303,66 @@
                   "readable",
                   "reportable"
                 ],
-                "id": 0
+                "id": 0,
+                "reportingConfiguration": {
+                  "status": "NOT_FOUND",
+                  "direction": "reported"
+                }
               },
               {
                 "acl": [
                   "readable",
                   "reportable"
                 ],
-                "id": 1
+                "id": 1,
+                "reportingConfiguration": {
+                  "direction": "reported",
+                  "attributeDataType": 32,
+                  "minInterval": 5,
+                  "maxInterval": 3600,
+                  "minChange": 1,
+                  "status": "SUCCESS"
+                }
               },
               {
                 "acl": [
                   "readable",
                   "reportable"
                 ],
-                "id": 2
+                "id": 2,
+                "reportingConfiguration": {
+                  "direction": "reported",
+                  "attributeDataType": 33,
+                  "minInterval": 5,
+                  "maxInterval": 3600,
+                  "minChange": 1,
+                  "status": "SUCCESS"
+                }
               },
               {
                 "acl": [
                   "readable",
                   "reportable"
                 ],
-                "id": 3
+                "id": 3,
+                "reportingConfiguration": {
+                  "direction": "reported",
+                  "attributeDataType": 16,
+                  "minInterval": 5,
+                  "maxInterval": 3600,
+                  "status": "SUCCESS"
+                }
               },
               {
                 "acl": [
                   "readable",
                   "reportable"
                 ],
-                "id": 4
+                "id": 4,
+                "reportingConfiguration": {
+                  "status": "NOT_FOUND",
+                  "direction": "reported"
+                }
               },
               {
                 "acl": [
@@ -267,7 +371,11 @@
                 ],
                 "id": 65533,
                 "name": "clusterRevision",
-                "value": 1
+                "value": 1,
+                "reportingConfiguration": {
+                  "status": "NOT_FOUND",
+                  "direction": "reported"
+                }
               }
             ],
             "commandsGenerated": [
@@ -297,14 +405,25 @@
                 ],
                 "id": 0,
                 "name": "onOff",
-                "value": false
+                "value": false,
+                "reportingConfiguration": {
+                  "direction": "reported",
+                  "attributeDataType": 16,
+                  "minInterval": 5,
+                  "maxInterval": 600,
+                  "status": "SUCCESS"
+                }
               },
               {
                 "acl": [
                   "readable",
                   "reportable"
                 ],
-                "id": 16384
+                "id": 16384,
+                "reportingConfiguration": {
+                  "status": "NOT_FOUND",
+                  "direction": "reported"
+                }
               },
               {
                 "acl": [
@@ -314,7 +433,11 @@
                 ],
                 "id": 16385,
                 "name": "onTime",
-                "value": 0
+                "value": 0,
+                "reportingConfiguration": {
+                  "status": "NOT_FOUND",
+                  "direction": "reported"
+                }
               },
               {
                 "acl": [
@@ -324,7 +447,11 @@
                 ],
                 "id": 16386,
                 "name": "offWaitTime",
-                "value": 0
+                "value": 0,
+                "reportingConfiguration": {
+                  "status": "NOT_FOUND",
+                  "direction": "reported"
+                }
               },
               {
                 "acl": [
@@ -332,7 +459,11 @@
                   "writable",
                   "reportable"
                 ],
-                "id": 16387
+                "id": 16387,
+                "reportingConfiguration": {
+                  "status": "NOT_FOUND",
+                  "direction": "reported"
+                }
               },
               {
                 "acl": [
@@ -341,7 +472,11 @@
                 ],
                 "id": 65533,
                 "name": "clusterRevision",
-                "value": 1
+                "value": 1,
+                "reportingConfiguration": {
+                  "status": "NOT_FOUND",
+                  "direction": "reported"
+                }
               }
             ],
             "commandsGenerated": [],
@@ -356,7 +491,15 @@
                 ],
                 "id": 0,
                 "name": "currentLevel",
-                "value": 1
+                "value": 1,
+                "reportingConfiguration": {
+                  "direction": "reported",
+                  "attributeDataType": 32,
+                  "minInterval": 5,
+                  "maxInterval": 600,
+                  "minChange": 1,
+                  "status": "SUCCESS"
+                }
               },
               {
                 "acl": [
@@ -365,7 +508,11 @@
                 ],
                 "id": 1,
                 "name": "remainingTime",
-                "value": 0
+                "value": 0,
+                "reportingConfiguration": {
+                  "status": "NOT_FOUND",
+                  "direction": "reported"
+                }
               },
               {
                 "acl": [
@@ -373,7 +520,11 @@
                   "writable",
                   "reportable"
                 ],
-                "id": 15
+                "id": 15,
+                "reportingConfiguration": {
+                  "status": "NOT_FOUND",
+                  "direction": "reported"
+                }
               },
               {
                 "acl": [
@@ -383,7 +534,11 @@
                 ],
                 "id": 17,
                 "name": "onLevel",
-                "value": 254
+                "value": 255,
+                "reportingConfiguration": {
+                  "status": "NOT_FOUND",
+                  "direction": "reported"
+                }
               },
               {
                 "acl": [
@@ -391,7 +546,11 @@
                   "writable",
                   "reportable"
                 ],
-                "id": 16384
+                "id": 16384,
+                "reportingConfiguration": {
+                  "status": "NOT_FOUND",
+                  "direction": "reported"
+                }
               },
               {
                 "acl": [
@@ -400,7 +559,11 @@
                 ],
                 "id": 65533,
                 "name": "clusterRevision",
-                "value": 1
+                "value": 1,
+                "reportingConfiguration": {
+                  "status": "NOT_FOUND",
+                  "direction": "reported"
+                }
               }
             ],
             "commandsGenerated": [],
@@ -462,14 +625,30 @@
                   "readable",
                   "reportable"
                 ],
-                "id": 284
+                "id": 284,
+                "reportingConfiguration": {
+                  "direction": "reported",
+                  "attributeDataType": 32,
+                  "minInterval": 900,
+                  "maxInterval": 900,
+                  "minChange": 255,
+                  "status": "SUCCESS"
+                }
               },
               {
                 "acl": [
                   "readable",
                   "reportable"
                 ],
-                "id": 285
+                "id": 285,
+                "reportingConfiguration": {
+                  "direction": "reported",
+                  "attributeDataType": 40,
+                  "minInterval": 900,
+                  "maxInterval": 900,
+                  "minChange": 127,
+                  "status": "SUCCESS"
+                }
               },
               {
                 "acl": [
@@ -478,9 +657,20 @@
                 ],
                 "id": 65533,
                 "name": "clusterRevision",
-                "value": 1
+                "value": 1,
+                "reportingConfiguration": {
+                  "status": "NOT_FOUND",
+                  "direction": "reported"
+                }
               }
             ],
+            "commandsGenerated": [],
+            "commandsReceived": []
+          }
+        },
+        "bindings": {
+          "ota": {
+            "attributes": [],
             "commandsGenerated": [],
             "commandsReceived": []
           }
