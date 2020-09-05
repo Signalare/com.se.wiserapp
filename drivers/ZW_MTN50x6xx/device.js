@@ -1,13 +1,14 @@
 'use strict';
 
-const Homey = require('homey');
 const { ZwaveDevice } = require('homey-zwavedriver');
 
-class ZW_MTN50x6xx extends ZwaveDevice {
+class ZW_MTN50X6XX extends ZwaveDevice {
 
-  /* This dimmer first sends the commands to the associated devices (group 2) and only after 10 seconds sends the report with status change to the controller
-	 * To mitigate the slow UI response additional parameter recoverDimValuehas been used that restores the value after receiving the SET command (group 2)
-	 */
+  /* This dimmer first sends the commands to the associated devices (group 2) and only after
+   * 10 seconds sends the report with status change to the controller.
+   * To mitigate the slow UI response additional parameter recoverDimValuehas been used that
+   * restores the value after receiving the SET command (group 2)
+   */
 
   async onNodeInit() {
     this.enableDebug();
@@ -55,7 +56,8 @@ class ZW_MTN50x6xx extends ZwaveDevice {
       },
     });
 
-    // Default SWITCH_MULTILEVEL_REPORT has delay of 10 seconds, using SWITCH_MULTILEVEL_SET to provide fast UI response
+    // Default SWITCH_MULTILEVEL_REPORT has delay of 10 seconds,
+    // using SWITCH_MULTILEVEL_SET to provide fast UI response
     this.registerReportListener('SWITCH_MULTILEVEL', 'SWITCH_MULTILEVEL_SET', (rawReport, parsedReport) => {
       if (rawReport && rawReport.hasOwnProperty('Value (Raw)')) {
         const parsedValue = rawReport['Value (Raw)'][0];
@@ -125,8 +127,9 @@ class ZW_MTN50x6xx extends ZwaveDevice {
 
 }
 
-module.exports = ZW_MTN50x6xx;
+module.exports = ZW_MTN50X6XX;
 
+/* eslint-disable */
 /*
 2020-05-18 21:14:42 [log] [ManagerDrivers] [ZW_MTN50x6xx] [0] ------------------------------------------
 2020-05-18 21:14:42 [log] [ManagerDrivers] [ZW_MTN50x6xx] [0] Node: 76
@@ -227,3 +230,4 @@ module.exports = ZW_MTN50x6xx;
 2020-05-18 21:14:42 [log] [ManagerDrivers] [ZW_MTN50x6xx] [0] --- BASIC_SET
 2020-05-18 21:14:42 [log] [ManagerDrivers] [ZW_MTN50x6xx] [0] ------------------------------------------
 */
+/* eslint-enable */
