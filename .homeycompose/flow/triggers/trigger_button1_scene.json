@@ -5,6 +5,11 @@
     "nl": "Een scene is geactiveerd",
     "de": "Eine Szene wurde aktiviert"
   },
+  "titleFormatted": {
+    "en": "Scene [[scene]] has been activated",
+    "nl": "Scene [[scene]] is geactiveerd",
+    "de": "Szene [[scene]] wurde aktiviert"
+  },
   "hint": {
     "en": "This card will only get triggered if the scene matches the state of the dropdown fields.",
     "nl": "Deze kaart wordt alleen geactiveerd wanneer de scene overeenkomt met de toestand van de gekozen opties.",
