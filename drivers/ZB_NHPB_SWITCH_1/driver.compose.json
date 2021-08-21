@@ -38,7 +38,7 @@
       },
       "21": {
         "clusters": [
-
+          65303
         ],
         "bindings": [
 
@@ -87,6 +87,43 @@
           "attr": {
             "min": 0,
             "max": 86400
+          }
+        }
+      ]
+    },
+    {
+      "id": "backlight_mode",
+      "type": "dropdown",
+      "value": "consistentWithLoad",
+      "label": {
+        "en": "Backlight Mode"
+      },
+      "hint": {
+        "en": "Default: Consistent with load"
+      },
+      "values": [
+        {
+          "id": "consistentWithLoad",
+          "label": {
+            "en": "Consistent with load"
+          }
+        },
+        {
+          "id": "reverseWithLoad",
+          "label": {
+            "en": "Reverse with load"
+          }
+        },
+        {
+          "id": "alwaysOn",
+          "label": {
+            "en": "Always on"
+          }
+        },
+        {
+          "id": "alwaysOff",
+          "label": {
+            "en": "Always off"
           }
         }
       ]
