@@ -4,6 +4,10 @@
 		"en": "Start dim level change",
 		"nl": "Start helderheid transitie"
 	},
+	"titleFormatted": {
+		"en": "Start [[direction]]",
+		"nl": "Start [[direction]]"
+	},
 	"hint": {
 		"en": "This action card will trigger the start of a dim level change in the set direction. \nDuration (for the change in dim-level from 0-100%) can be set by using the transition symbol. \nIf not set, factory default duration is used.",
 		"nl": "Deze actie kaart start een helderheids transitie in de ingestelde richting. \nTransitie duur (voor de transitie in helderheid van 0-100%) kan ingesteld worden met behulp van de transitie symbool. \nWanneer niet ingesteld, dan wordt de standaard duur gebruikt."
