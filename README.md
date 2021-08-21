@@ -3,6 +3,12 @@
 Homey app for for use with Schnieder Electric devices without it's gateway.
 
 ### Changelog
+master
+- Updated app images and icon.
+- Verified zigbee driver ZB_NHPB_SWITCH_1: Push button switch (WDE00x348)
+- Added setting Backlight Mode in driver ZB_NHPB_SWITCH_1 (how the small LED should indicate device on/off status).
+- Added Sentry support.
+
 v0.2.3
 - Added support for Z-Wave ZW_MTN50x6xx devices.
 
