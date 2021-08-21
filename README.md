@@ -1,6 +1,6 @@
 # Schnieder Electric Wiser
 
-Adds support for Schnieder Electric Wiser devices
+Homey app for for use with Schnieder Electric devices without it's gateway.
 
 ### Changelog
 v0.2.3
