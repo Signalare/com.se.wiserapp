@@ -3,21 +3,21 @@
   "version": "0.2.3",
   "main": "app.js",
   "scripts": {
-    "lint": "eslint ."
+    "lint": "eslint --ext .js,.ts --ignore-path .gitignore .",
+    "lint-fix": "eslint --fix --ext .js,.ts --ignore-path .gitignore .",
+    "git-app.json": "git update-index --skip-worktree app.json"
   },
   "devDependencies": {
+    "@tsconfig/node12": "^1.0.9",
     "@types/homey": "npm:homey-apps-sdk-v3-types@^0.2.2",
+    "@types/node": "^16.11.12",
     "eslint": "^7.32.0",
-    "eslint-config-athom": "^2.1.1",
-    "homey": "^2.20.6"
+    "eslint-config-athom": "^3.0.1"
   },
   "dependencies": {
     "homey-log": "^2.0.1",
-    "homey-zigbeedriver": "^1.6.6",
-    "homey-zwavedriver": "^1.0.4",
+    "homey-zigbeedriver": "^1.6.10",
+    "homey-zwavedriver": "^2.1.8",
     "zigbee-clusters": "^1.4.1"
-  },
-  "engines": {
-    "node": ">=12.16.1"
   }
 }
