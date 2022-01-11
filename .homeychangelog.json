@@ -1,4 +1,7 @@
 {
+  "0.3.0": {
+    "en": "Adds support for Motion Dimmer, Motion Switch, Smart Plug, 1-way socket, 2-way socket, Updated translations, Updated pairing instructions"
+  },
   "0.2.0": {
     "en": "Rewrite of all zigbee drivers to support SDK 3, Added support for Push button switch (WDE002476, WDE003476, WDE004476)"
   },

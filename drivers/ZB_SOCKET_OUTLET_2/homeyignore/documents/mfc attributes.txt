@@ -1,0 +1,102 @@
+ZigBee Application Support Layer Data, Dst Endpt: 1, Src Endpt: 6
+    Frame Control Field: Data (0x40)
+    Destination Endpoint: 1
+    Cluster: Basic (0x0000)
+    Profile: Home Automation (0x0104)
+    Source Endpoint: 6
+    Counter: 56
+ZigBee Cluster Library Frame, Mfr: Schneider Electric (0x105e), Command: Discover Attributes Response, Seq: 0
+    Frame Control Field: Profile-wide (0x1c)
+    Manufacturer Code: Schneider Electric (0x105e)
+    Sequence Number: 0
+    Command: Discover Attributes Response (0x0d)
+    Attribute Status Record
+        Attribute: 0xe001
+        Data Type: Character String (0x42)
+    Attribute Status Record
+        Attribute: 0xe002
+        Data Type: Character String (0x42)
+    Attribute Status Record
+        Attribute: 0xe004
+        Data Type: Character String (0x42)
+    Attribute Status Record
+        Attribute: 0xe007
+        Data Type: 16-Bit Enumeration (0x31)
+    Attribute Status Record
+        Attribute: 0xe008
+        Data Type: Character String (0x42)
+    Attribute Status Record
+        Attribute: 0xe009
+        Data Type: Character String (0x42)
+    Attribute Status Record
+        Attribute: 0xe00a
+        Data Type: Character String (0x42)
+    Attribute Status Record
+        Attribute: 0xe00b
+        Data Type: Character String (0x42)
+------------------------------------------------------------------------------------------------------------------------
+ZigBee Application Support Layer Data, Dst Endpt: 1, Src Endpt: 6
+    Frame Control Field: Data (0x40)
+    Destination Endpoint: 1
+    Cluster: On/Off (0x0006)
+    Profile: Home Automation (0x0104)
+    Source Endpoint: 6
+    Counter: 60
+ZigBee Cluster Library Frame, Mfr: Schneider Electric (0x105e), Command: Discover Attributes Response, Seq: 0
+    Frame Control Field: Profile-wide (0x1c)
+    Manufacturer Code: Schneider Electric (0x105e)
+    Sequence Number: 0
+    Command: Discover Attributes Response (0x0d)
+    Attribute Status Record
+        Attribute: 0xe001
+        Data Type: 32-Bit Unsigned Integer (0x23)
+------------------------------------------------------------------------------------------------------------------------
+ZigBee Application Support Layer Data, Dst Endpt: 1, Src Endpt: 6
+    Frame Control Field: Data (0x40)
+    Destination Endpoint: 1
+    Cluster: Unknown (0x0b05)
+    Profile: Home Automation (0x0104)
+    Source Endpoint: 6
+    Counter: 63
+ZigBee Cluster Library Frame, Mfr: Schneider Electric (0x105e), Command: Discover Attributes Response, Seq: 0
+    Frame Control Field: Profile-wide (0x1c)
+    Manufacturer Code: Schneider Electric (0x105e)
+    Sequence Number: 0
+    Command: Discover Attributes Response (0x0d)
+    Attribute Status Record
+        Attribute: 0xff01
+        Data Type: 32-Bit Unsigned Integer (0x23)
+    Attribute Status Record
+        Attribute: 0xff02
+        Data Type: 32-Bit Unsigned Integer (0x23)
+    Attribute Status Record
+        Attribute: 0xff03
+        Data Type: 32-Bit Unsigned Integer (0x23)
+    Attribute Status Record
+        Attribute: 0xff04
+        Data Type: 32-Bit Unsigned Integer (0x23)
+    Attribute Status Record
+        Attribute: 0xff05
+        Data Type: 32-Bit Unsigned Integer (0x23)
+------------------------------------------------------------------------------------------------------------------------
+ZigBee Application Support Layer Data, Dst Endpt: 1, Src Endpt: 6
+    Frame Control Field: Data (0x40)
+    Destination Endpoint: 1
+    Cluster: Manufacturer Specific (0xfc04)
+    Profile: Home Automation (0x0104)
+    Source Endpoint: 6
+    Counter: 64
+ZigBee Cluster Library Frame, Mfr: Schneider Electric (0x105e), Command: Discover Attributes Response, Seq: 0
+    Frame Control Field: Profile-wide (0x1c)
+    Manufacturer Code: Schneider Electric (0x105e)
+    Sequence Number: 0
+    Command: Discover Attributes Response (0x0d)
+    Attribute Status Record
+        Attribute: 0x0000
+        Data Type: 8-Bit Unsigned Integer (0x20)
+    Attribute Status Record
+        Attribute: 0x0002
+        Data Type: 8-Bit Unsigned Integer (0x20)
+    Attribute Status Record
+        Attribute: 0xfffd
+        Data Type: 16-Bit Unsigned Integer (0x21)

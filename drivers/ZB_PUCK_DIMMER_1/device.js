@@ -1,10 +1,8 @@
 'use strict';
 
-const WiserGenericDevice = require('../../lib/ZB_WiserGenericDevice');
+const WiserDevice = require('../../lib/ZB_WiserDevice');
 
-class ZB_PUCK_DIMMER_1 extends WiserGenericDevice {
-
-  mainEndpoint = 3;
+class ZB_PUCK_DIMMER_1 extends WiserDevice {
 
 }
 

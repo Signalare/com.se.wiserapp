@@ -1,0 +1,28 @@
+Frame 41: 52 bytes on wire (416 bits), 52 bytes captured (416 bits) on interface wireshark_extcap2964, id 0
+IEEE 802.15.4 Data, Dst: 0x0000, Src: 0x26d3
+ZigBee Network Layer Data, Dst: 0x0000, Src: 0x26d3
+ZigBee Application Support Layer Data, Dst Endpt: 1, Src Endpt: 1
+    Frame Control Field: Data (0x40)
+        .... ..00 = Frame Type: Data (0x0)
+        .... 00.. = Delivery Mode: Unicast (0x0)
+        ..0. .... = Security: False
+        .1.. .... = Acknowledgement Request: True
+        0... .... = Extended Header: False
+    Destination Endpoint: 1
+    Cluster: Simple Metering (0x0702)
+    Profile: Home Automation (0x0104)
+    Source Endpoint: 1
+    Counter: 253
+ZigBee Cluster Library Frame, Mfr: Schneider Electric (0x105e), Command: Discover Attributes Response, Seq: 0
+    Frame Control Field: Profile-wide (0x0c)
+        .... ..00 = Frame Type: Profile-wide (0x0)
+        .... .1.. = Manufacturer Specific: True
+        .... 1... = Direction: Server to Client
+        ...0 .... = Disable Default Response: False
+    Manufacturer Code: Schneider Electric (0x105e)
+    Sequence Number: 0
+    Command: Discover Attributes Response (0x0d)
+    Attribute Status Record
+        Attribute: 0x041b
+        Data Type: 64-Bit Unsigned Integer (0x27)
+        Access: Readable, Writeable, Reportable

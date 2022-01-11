@@ -1,0 +1,59 @@
+{
+  "id": "ZB_SOCKET_OUTLET_2",
+  "name": {
+    "en": "2-way socket",
+    "no": "Enkel stikkontakt",
+    "sv": "2-vägsuttag",
+    "fi": "Kaksiosainen pistorasia"
+  },
+  "class": "socket",
+  "capabilities": [
+    "measure_power",
+    "measure_voltage",
+    "measure_current",
+    "meter_power",
+    "onoff"
+  ],
+  "images": {
+    "small": "{{driverAssetsPath}}/images/WDE002182_75.png",
+    "large": "{{driverAssetsPath}}/images/WDE002182_500.png",
+    "xlarge": "{{driverAssetsPath}}/images/WDE002182_1000.png"
+  },
+  "zigbee": {
+    "manufacturerName": "Schneider Electric",
+    "productId": "SOCKET/OUTLET/2",
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Short-press the button 3 times. Confirm that the LED is blinking red.",
+        "no": "Trykk raskt på knappen 3 ganger. Bekreft at LED -lampen blinker rødt.",
+        "sv": "Tryck snabbt 3 gånger på knappen. Bekräfta att lysdioden blinkar rött.",
+        "fi": "Paina painiketta nopeasti 3 kertaa. Varmista, että LED vilkkuu punaisena."
+      }
+    },
+    "endpoints": {
+      "6": {
+        "clusters": [
+          0,
+          3,
+          4,
+          5,
+          6,
+          1794,
+          2820,
+          2821,
+          64516
+        ],
+        "bindings": [
+          6,
+          1794,
+          2820
+        ]
+      },
+      "242": {
+        "clusters": [],
+        "bindings": []
+      }
+    }
+  }
+}
