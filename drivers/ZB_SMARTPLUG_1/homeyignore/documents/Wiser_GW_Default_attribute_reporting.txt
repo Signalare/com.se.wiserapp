@@ -1,0 +1,46 @@
+ZigBee Cluster Library Frame, Command: Configure Reporting, Seq: 120
+    Frame Control Field: Profile-wide (0x10)
+    Sequence Number: 120
+    Command: Configure Reporting (0x06)
+    Reporting Configuration Record, Int8: 127
+        Direction: Reported (0x00)
+        Attribute: 0x011d
+        Data Type: 8-Bit Signed Integer (0x28)
+        Int8: 127
+    Minimum Interval: 900
+    Maximum Interval: 900
+
+ZigBee Cluster Library Frame, Command: Configure Reporting, Seq: 122
+    Frame Control Field: Profile-wide (0x10)
+    Sequence Number: 122
+    Command: Configure Reporting (0x06)
+    Reporting Configuration Record
+        Direction: Reported (0x00)
+        Attribute: OnOff (0x0000)
+        Data Type: Boolean (0x10)
+    Minimum Interval: 0
+    Maximum Interval: 900
+
+ZigBee Cluster Library Frame, Command: Configure Reporting, Seq: 123
+    Frame Control Field: Profile-wide (0x10)
+    Sequence Number: 123
+    Command: Configure Reporting (0x06)
+    Reporting Configuration Record, Int16: 3
+        Direction: Reported (0x00)
+        Attribute: Active Power (0x050b)
+        Data Type: 16-Bit Signed Integer (0x29)
+        Int16: 3
+    Minimum Interval: 1
+    Maximum Interval: 900
+
+ZigBee Cluster Library Frame, Command: Configure Reporting, Seq: 124
+    Frame Control Field: Profile-wide (0x10)
+    Sequence Number: 124
+    Command: Configure Reporting (0x06)
+    Reporting Configuration Record, Uint: 50
+        Direction: Reported (0x00)
+        Attribute: Current Summation Delivered (0x0000)
+        Data Type: 48-Bit Unsigned Integer (0x25)
+        Uint48: 50 (0x0000000000000032)
+    Minimum Interval: 1
+    Maximum Interval: 900

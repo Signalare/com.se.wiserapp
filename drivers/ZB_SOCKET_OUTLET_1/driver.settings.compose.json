@@ -1,0 +1,57 @@
+[
+  {
+    "id": "backlightMode",
+    "type": "dropdown",
+    "value": "consistentWithLoad",
+    "label": {
+      "en": "Status indication",
+      "no": "Statusindikasjon",
+      "sv": "Statusindikering",
+      "fi": "Tilan ilmaisu"
+    },
+    "hint": {
+      "en": "How to display the load indication",
+      "no": "Hvordan vise lastindikasjonen",
+      "sv": "Hur indikeringen av lasten ska visas",
+      "fi": "Miten kuormitusilmaisin näytetään"
+    },
+    "values": [
+      {
+        "id": "consistentWithLoad",
+        "label": {
+          "en": "Consistent with load",
+          "no": "konsistent med belastning",
+          "sv": "Överensstämmer med last",
+          "fi": "Yhdenmukainen kuorman kanssa"
+        }
+      },
+      {
+        "id": "reverseWithLoad",
+        "label": {
+          "en": "Reverse with load",
+          "no": "Reversere med last",
+          "sv": "Omvänt mot last",
+          "fi": "Taaksepäin kuorman kanssa"
+        }
+      },
+      {
+        "id": "alwaysOn",
+        "label": {
+          "en": "Always on",
+          "no": "Alltid på",
+          "sv": "Alltid på",
+          "fi": "Aina päällä"
+        }
+      },
+      {
+        "id": "alwaysOff",
+        "label": {
+          "en": "Always off",
+          "no": "Alltid av",
+          "sv": "Alltid av",
+          "fi": "Aina pois päältä"
+        }
+      }
+    ]
+  }
+]

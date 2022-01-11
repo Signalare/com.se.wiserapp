@@ -3,11 +3,16 @@
 Homey app for for use with Schnieder Electric devices without it's gateway.
 
 ### Changelog
-master
+v0.3.0
+- Added zigbee driver ZB_NHMOTION_DIMMER_1: Motion Dimmer (WDE002374, WDE003374, WDE004374)
+- Added zigbee driver ZB_NHMOTION_SWITCH_1: Motion Switch (WDE002367, WDE003367, WDE004367)
+- Added zigbee driver ZB_SMARTPLUG_1: Smart Plug (CCT711119)
+- Added zigbee driver ZB_SOCKET_OUTLET_1: 1-way socket (WDE002172)
+- Added zigbee driver ZB_SOCKET_OUTLET_2: 2-way socket (WDE002182)
+- Updated translations.
 - Updated app images and icon.
 - Verified zigbee driver ZB_NHPB_SWITCH_1: Push button switch (WDE00x348)
 - Added setting Backlight Mode in driver ZB_NHPB_SWITCH_1 (how the small LED should indicate device on/off status).
-- Added Sentry support.
 
 v0.2.3
 - Added support for Z-Wave ZW_MTN50x6xx devices.

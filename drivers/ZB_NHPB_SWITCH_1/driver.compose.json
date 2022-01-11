@@ -1,22 +1,30 @@
 {
   "id": "ZB_NHPB_SWITCH_1",
   "name": {
-    "en": "Push button switch"
+    "no": "Brytere",
+    "sv": "Strömställare",
+    "fi": "Kytkimet",
+    "en": "Switch"
   },
   "class": "light",
   "capabilities": [
     "onoff"
   ],
   "images": {
-    "large": "{{driverAssetsPath}}/images/large.png",
-    "small": "{{driverAssetsPath}}/images/small.png"
+    "small": "{{driverAssetsPath}}/images/WDE002348_75.png",
+    "large": "{{driverAssetsPath}}/images/WDE002348_500.png",
+    "xlarge": "{{driverAssetsPath}}/images/WDE002348_1000.png"
   },
   "zigbee": {
     "manufacturerName": "Schneider Electric",
     "productId": "NHPB/SWITCH/1",
     "learnmode": {
+      "image": "{{driverAssetsPath}}/learnmode.svg",
       "instruction": {
-        "en": "Toggle (push) the button 3 times quickly.\n\nIf pairing does not automatically start, try toggle the button 3 times quickly, then hold it down until the LED blinks red rapidly (it takes more than 20 seconds) and then try pairing the device again."
+        "no": "Trykk kort på den øvre delen av bryteren 3 ganger. Bekreft at LED -lampen blinker rødt.",
+        "sv": "Tryck snabbt 3 gånger på den övre delen av knappen. Bekräfta att lysdioden blinkar rött.",
+        "fi": "Paina lyhyesti kytkimen yläosaa 3 kertaa. Varmista, että LED vilkkuu punaisena.",
+        "en": "Short-press upper part of switch 3 times. Confirm that the LED is blinking red."
       }
     },
     "endpoints": {
@@ -40,93 +48,8 @@
         "clusters": [
           65303
         ],
-        "bindings": [
-
-        ]
+        "bindings": []
       }
     }
-  },
-  "settings": [
-    {
-      "type": "group",
-      "label": {
-        "en": "Timer"
-      },
-      "children": [
-        {
-          "id": "onoff_offtimer",
-          "type": "number",
-          "label": {
-            "en": "Off timer"
-          },
-          "hint": {
-            "en": "0=disabled"
-          },
-          "value": 0,
-          "units": {
-            "en": "s"
-          },
-          "attr": {
-            "min": 0,
-            "max": 86400
-          }
-        },
-        {
-          "id": "onoff_prewarning",
-          "type": "number",
-          "label": {
-            "en": "Prewarning"
-          },
-          "hint": {
-            "en": "Indicates the end of the timer by slowly dimming down 0=disabled"
-          },
-          "value": 0,
-          "units": {
-            "en": "s"
-          },
-          "attr": {
-            "min": 0,
-            "max": 86400
-          }
-        }
-      ]
-    },
-    {
-      "id": "backlight_mode",
-      "type": "dropdown",
-      "value": "consistentWithLoad",
-      "label": {
-        "en": "Backlight Mode"
-      },
-      "hint": {
-        "en": "Default: Consistent with load"
-      },
-      "values": [
-        {
-          "id": "consistentWithLoad",
-          "label": {
-            "en": "Consistent with load"
-          }
-        },
-        {
-          "id": "reverseWithLoad",
-          "label": {
-            "en": "Reverse with load"
-          }
-        },
-        {
-          "id": "alwaysOn",
-          "label": {
-            "en": "Always on"
-          }
-        },
-        {
-          "id": "alwaysOff",
-          "label": {
-            "en": "Always off"
-          }
-        }
-      ]
-    }
-  ]
+  }
 }

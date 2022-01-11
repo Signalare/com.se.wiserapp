@@ -1,22 +1,30 @@
 {
   "id": "ZB_PUCK_SWITCH_1",
   "name": {
-    "en": "Micro Module Switch"
+    "no": "Relémodul",
+    "sv": "Relämodul",
+    "fi": "Relemoduuli",
+    "en": "Switch module"
   },
   "class": "light",
   "capabilities": [
     "onoff"
   ],
   "images": {
-    "large": "{{driverAssetsPath}}/images/large.png",
-    "small": "{{driverAssetsPath}}/images/small.png"
+    "small": "{{driverAssetsPath}}/images/CCT5011-0002_75.png",
+    "large": "{{driverAssetsPath}}/images/CCT5011-0002_500.png",
+    "xlarge": "{{driverAssetsPath}}/images/CCT5011-0002_1000.png"
   },
   "zigbee": {
     "manufacturerName": "Schneider Electric",
     "productId": "PUCK/SWITCH/1",
     "learnmode": {
+      "image": "{{driverAssetsPath}}/learnmode.svg",
       "instruction": {
-        "en": "Toggle the pair button or an attached wall switch 3 times quickly.\n\nIf pairing does not automatically start, try toggle the pair button or attached wall switch 3 times quickly, then hold it down until the LED blinks red rapidly (it takes more than 20 seconds) and then try pairing the device again."
+        "no": "Trykk kort på Setup/Reset-knappen 3 ganger. Bekreft at LED -lampen blinker oransje.",
+        "sv": "Tryck snabbt 3 gånger på knappen Setup/Reset. Bekräfta att lysdioden blinkar orange.",
+        "fi": "Paina nopeasti Setup/Reset-painiketta 3 kertaa. Varmista, että LED vilkkuu oranssina.",
+        "en": "Short-press the Setup/Reset button 3 times. Confirm that the LED is blinking amber."
       }
     },
     "endpoints": {
@@ -34,59 +42,9 @@
         ]
       },
       "21": {
-        "clusters": [
-
-        ],
-        "bindings": [
-
-        ]
+        "clusters": [],
+        "bindings": []
       }
     }
-  },
-  "settings": [
-    {
-      "type": "group",
-      "label": {
-        "en": "Timer"
-      },
-      "children": [
-        {
-          "id": "onoff_offtimer",
-          "type": "number",
-          "label": {
-            "en": "Off timer"
-          },
-          "hint": {
-            "en": "0=disabled"
-          },
-          "value": 0,
-          "units": {
-            "en": "s"
-          },
-          "attr": {
-            "min": 0,
-            "max": 86400
-          }
-        },
-        {
-          "id": "onoff_prewarning",
-          "type": "number",
-          "label": {
-            "en": "Prewarning"
-          },
-          "hint": {
-            "en": "Indicates the end of the timer by slowly dimming down 0=disabled"
-          },
-          "value": 0,
-          "units": {
-            "en": "s"
-          },
-          "attr": {
-            "min": 0,
-            "max": 86400
-          }
-        }
-      ]
-    }
-  ]
+  }
 }

@@ -1,0 +1,50 @@
+{
+  "id": "ZB_SMARTPLUG_1",
+  "name": {
+    "en": "Smart Plug"
+  },
+  "class": "socket",
+  "capabilities": [
+    "measure_power",
+    "meter_power",
+    "onoff"
+  ],
+  "images": {
+    "small": "{{driverAssetsPath}}/images/CCT711119_75.png",
+    "large": "{{driverAssetsPath}}/images/CCT711119_500.png",
+    "xlarge": "{{driverAssetsPath}}/images/CCT711119_1000.png"
+  },
+  "zigbee": {
+    "manufacturerName": "Schneider Electric",
+    "productId": "SMARTPLUG/1",
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Short-press the operation button 3 times. Confirm LED is blinking green."
+      }
+    },
+    "endpoints": {
+      "1": {
+        "clusters": [
+          0,
+          3,
+          4,
+          5,
+          6,
+          1794,
+          2820,
+          2821
+        ],
+        "bindings": [
+          6,
+          1794,
+          2820
+        ]
+      },
+      "242": {
+        "clusters": [],
+        "bindings": []
+      }
+    }
+  }
+}

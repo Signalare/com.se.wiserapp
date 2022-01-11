@@ -1,13 +1,12 @@
 'use strict';
 
 const Homey = require('homey');
-const { Log } = require('homey-log');
+// const { Log } = require('homey-log');
 
 class WiserApp extends Homey.App {
 
   onInit() {
-
-    this.homeyLog = new Log({ homey: this.homey });
+    // this.homeyLog = new Log({ homey: this.homey });
 
     this.triggerButton1_button = this.homey.flow
       .getDeviceTriggerCard('trigger_button1_button');

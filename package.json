@@ -1,6 +1,6 @@
 {
   "name": "com.se.wiserapp",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "main": "app.js",
   "scripts": {
     "lint": "eslint --ext .js,.ts --ignore-path .gitignore .",
@@ -15,9 +15,11 @@
     "eslint-config-athom": "^3.0.1"
   },
   "dependencies": {
-    "homey-log": "^2.0.1",
     "homey-zigbeedriver": "^1.6.10",
     "homey-zwavedriver": "^2.1.8",
     "zigbee-clusters": "^1.4.1"
+  },
+  "engines": {
+    "node": "12.16.1"
   }
 }
