@@ -1,6 +1,6 @@
 {
   "name": "com.se.wiserapp",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "main": "app.js",
   "scripts": {
     "lint": "eslint --ext .js,.ts --ignore-path .gitignore .",
@@ -8,18 +8,18 @@
     "git-app.json": "git update-index --skip-worktree app.json"
   },
   "devDependencies": {
-    "@tsconfig/node12": "^1.0.9",
-    "@types/homey": "npm:homey-apps-sdk-v3-types@^0.2.2",
-    "@types/node": "^16.11.12",
-    "eslint": "^7.32.0",
-    "eslint-config-athom": "^3.0.1"
+    "@tsconfig/node12": "^1.0.11",
+    "@types/homey": "npm:homey-apps-sdk-v3-types@^0.3.3",
+    "@types/node": "^18.13.0",
+    "eslint": "^7.2.0",
+    "eslint-config-athom": "^3.1.1"
   },
   "dependencies": {
-    "homey-zigbeedriver": "^1.6.10",
-    "homey-zwavedriver": "^2.1.8",
-    "zigbee-clusters": "^1.4.1"
+    "homey-zigbeedriver": "^1.6.12",
+    "homey-zwavedriver": "^2.1.10",
+    "zigbee-clusters": "^1.7.3"
   },
   "engines": {
-    "node": "12.16.1"
+    "node": ">=12.16.1"
   }
 }

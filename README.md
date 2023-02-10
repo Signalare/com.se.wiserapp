@@ -3,6 +3,9 @@
 Homey app for for use with Schnieder Electric devices without it's gateway.
 
 ### Changelog
+v0.3.1
+- Updated NPM dependencies.
+
 v0.3.0
 - Added zigbee driver ZB_NHMOTION_DIMMER_1: Motion Dimmer (WDE002374, WDE003374, WDE004374)
 - Added zigbee driver ZB_NHMOTION_SWITCH_1: Motion Switch (WDE002367, WDE003367, WDE004367)

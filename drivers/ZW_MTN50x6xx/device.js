@@ -118,7 +118,7 @@ class ZW_MTN50X6XX extends ZwaveDevice {
       });
     }
     // filter for query
-    resultArray = resultArray.filter(result => {
+    resultArray = resultArray.filter((result) => {
       return result.name.toLowerCase().indexOf(query.toLowerCase()) > -1;
     });
     this._debug(resultArray);
