@@ -1,0 +1,60 @@
+{
+    "id": "Wiser 2G",
+    "name": {
+      "en": "Wiser 2G"
+    },
+    "class": "socket",
+    "capabilities": [
+      "onoff"
+    ],
+    "images": {
+      "large": "{{driverAssetsPath}}/images/large.png",
+      "small": "{{driverAssetsPath}}/images/small.png"
+    },
+    "energy": {
+      "approximation": {
+        "usageOn": 0,
+        "usageOff": 0
+      }
+    },
+    "zigbee": {
+      "manufacturerName": [
+        "Schneider Electric"
+      ],
+      "productId": [
+        "E8332SRY800ZB"
+      ],
+      "endpoints": {
+        "10": {
+          "clusters": [0, 6],
+          "bindings": [6]
+        },
+        "11": {
+          "clusters": [6],
+          "bindings": [6]
+        }
+      },
+      "devices": {
+        "secondSwitch": {
+          "class": "socket",
+          "capabilities": ["onoff"],
+          "name": {
+            "en": "Wiser 2G B2"
+          },
+          "energy": {
+            "approximation": {
+              "usageOn": 0,
+              "usageOff": 0
+            }
+          }
+        }
+      },
+      "learnmode": {
+        "image": "{{driverAssetsPath}}/icon.svg",
+        "instruction": {
+          "en": "Remove the front panel and press the setup button for 3 times (the LED should start blinking). A tile for each button will be created upon completion."
+        }
+      }
+    }
+
+}
