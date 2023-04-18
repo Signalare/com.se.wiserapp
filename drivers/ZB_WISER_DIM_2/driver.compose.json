@@ -1,0 +1,88 @@
+{
+    "id": "Wiser Dimmer 2G",
+    "name": {
+      "en": "Wiser Dimmer 2G"
+    },
+    "class": "light",
+    "capabilities": [
+      "onoff",
+      "dim"
+    ],
+    "capabilitiesOptions": {
+      "dim": {
+          "opts": {
+          "duration": true
+          }
+      }
+    },
+    "images": {
+      "large": "{{driverAssetsPath}}/images/large.png",
+      "small": "{{driverAssetsPath}}/images/small.png"
+    },
+    "energy": {
+      "approximation": {
+        "usageOn": 0,
+        "usageOff": 0
+      }
+    },
+    "zigbee": {
+      "manufacturerName": [
+        "Schneider Electric"
+      ],
+      "productId": [
+        "E8332DST350ZB"
+      ],
+      "endpoints": {
+        "10": {
+          "clusters": [
+            0,
+            3,
+            4,
+            5,
+            6,
+            8,
+            769],
+          "bindings": [
+            6,
+            8,
+            769]
+        },
+        "11": {
+          "clusters": [
+            0,
+            3,
+            4,
+            5,
+            6,
+            8,
+            769],
+          "bindings": [
+            6,
+            8,
+            769]
+        }
+      },
+      "devices": {
+        "secondSwitch": {
+          "class": "light",
+          "capabilities": ["onoff","dim"],
+          "name": {
+            "en": "Wiser Dimmer B2"
+          },
+          "energy": {
+            "approximation": {
+              "usageOn": 0,
+              "usageOff": 0
+            }
+          }
+        }
+      },
+      "learnmode": {
+        "image": "{{driverAssetsPath}}/icon.svg",
+        "instruction": {
+          "en": "Remove the front panel and press the setup button for 3 times (the LED should start blinking). A tile for each button will be created upon completion."
+        }
+      }
+    }
+
+}
